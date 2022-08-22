@@ -1,23 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import * as d3 from 'd3';
+import React, { useLayoutEffect, useRef } from 'react';
 
-function App() {
+let definitionsCSV = require('./assets/definitions-2021.csv');
+
+let parsedDef = d3.csv(definitionsCSV, function (data) {
+  return data;
+});
+
+useLayoutEffect(()=> {
+  parsedDef.then(data=>{
+    App(data);
+  })
+},[])
+function App(data) {
+  let groupedData = d3.group(data, d => d["Dimension"], d => d["Component"], d => d['Indicator name']);
+
+  let ref = useRef();
+
+  let defDiv = d3.select(ref.current);
+
+  let dimensionsDiv = defDiv.selectAll('.dimension')
+    .data(groupedData, d => d[0])
+    .join(
+      enter => enter
+        .append("div")
+        .attr("class", (d, i) => { return `dim-${i} dimension`; })
+        .attr("id", d => {
+          if (d[0].length === 0) {
+            return "footer";
+          }
+          //class and ID to isolate footer
+          let id = (d[0]).replace(/ /g, "_");
+          return id;
+        }));
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="DefinitionsApp" ref={ref} >
     </div>
   );
 }
