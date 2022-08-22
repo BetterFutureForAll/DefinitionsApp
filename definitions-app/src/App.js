@@ -8,32 +8,49 @@ let parsedDef = d3.csv(definitionsCSV, function (data) {
   return data;
 });
 
-useLayoutEffect(()=> {
-  parsedDef.then(data=>{
-    App(data);
-  })
-},[])
-function App(data) {
-  let groupedData = d3.group(data, d => d["Dimension"], d => d["Component"], d => d['Indicator name']);
+function App() {
 
   let ref = useRef();
 
-  let defDiv = d3.select(ref.current);
+  useLayoutEffect(() => {
+    parsedDef.then(data => {
+      Draw(data);
+    })
+  }, [])
 
-  let dimensionsDiv = defDiv.selectAll('.dimension')
-    .data(groupedData, d => d[0])
-    .join(
-      enter => enter
-        .append("div")
-        .attr("class", (d, i) => { return `dim-${i} dimension`; })
-        .attr("id", d => {
-          if (d[0].length === 0) {
-            return "footer";
-          }
-          //class and ID to isolate footer
-          let id = (d[0]).replace(/ /g, "_");
-          return id;
-        }));
+  function Draw(data) {
+    let groupedData = d3.group(data, d => d["Dimension"], d => d["Component"], d => d['Indicator name']);
+
+    let defDiv = d3.select(ref.current);
+
+    let dimensionsDiv = defDiv.selectAll('.dimension')
+      .data(groupedData, d => d[0])
+      .join(
+        enter => enter
+          .append("div")
+          .attr("class", (d, i) => { return `dim-${i} dimension`; })
+          .attr("id", d => {
+            if (d[0].length === 0) {
+              return "footer";
+            }
+            //class and ID to isolate footer
+            let id = (d[0]).replace(/ /g, "_");
+            return id;
+          }));
+
+    dimensionsDiv.selectAll('.component')
+      .append('div').attr('class', 'component-box')
+      .selectAll('.component')
+      .data(groupedData, d => d[0])
+      .join(
+        enter => enter.append('div').attr("class", "component").attr("id", d => {
+          console.log(d);
+          let parsedId = d[0].replace(/ /g, "_");
+          return parsedId;
+        }),
+        exit => exit.remove()
+      );
+  };
 
 
   return (
