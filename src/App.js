@@ -48,11 +48,11 @@ function App() {
 
     let defDiv = d3.select(ref.current);
     console.log(groupedData);
-    let dimensionsDiv = defDiv.selectAll('.dimension')
+    defDiv.selectAll('.dimension')
       .data(groupedData, d => d[0])
       .join(
         enter => {
-          enter
+          let dimDiv = enter
             .append("div")
             .attr("class", (d, i) => { return `dim-${i} dimension`; })
             .attr("id", d => {
@@ -63,47 +63,51 @@ function App() {
               let id = (d[0]).replace(/ /g, "_");
               return id;
             });
+
+          //Dimensions Title Bar
+          let divTitle = dimDiv.append('div').attr("id", d => {
+            if (d[0].length === 0) {
+              return "footer";
+            }
+            //class and ID to isolate footer
+            let id = (d[0]).replace(/ /g, "_");
+            return `${id}_title`;
+          }).attr('class', 'dimension-title').on('click', addComponents);
+
+          //indicator icon 
+          // divTitle.append("h3").text('+').attr("class", "dimension_icon");
+          //images
+          divTitle.append("img").attr("src", (d, i) => {
+            switch (i) {
+              case 0: return basic_needs;
+              case 1: return foundations;
+              case 2: return opportunity;
+              default: return;
+            }
+          }).attr('class', 'dimension_img');
+
           return enter;
         });
 
-            //Dimensions Title Bar
-      let divTitle = dimensionsDiv.append('div').attr("id", d => {
-        if (d[0].length === 0) {
-          return "footer";
-        }
-        //class and ID to isolate footer
-        let id = (d[0]).replace(/ /g, "_");
-        return `${id}_title`;
-      }).attr('class', 'dimension-title').on('click', addComponents);
 
-      //indicator icon 
-      // divTitle.append("h3").text('+').attr("class", "dimension_icon");
-      //images
-      divTitle.append("img").attr("src", (d, i) => {
-        switch (i) {
-          case 0: return basic_needs;
-          case 1: return foundations;
-          case 2: return opportunity;
-          default: return;
-        }
-      }).attr('class', 'dimension_img');
 
-      function addComponents(event, d) {
-          console.log(event, d);
-          dimensionsDiv
-          .append('div').attr('class', 'component-box')
-          .selectAll('.component')
-          .data(d[1])
-          .join(
-            enter => enter.append('div').attr("class", "component").attr("id", d => {
-              let parsedId = d[0].replace(/ /g, "_");
-              return parsedId;
-            }),
-            exit => exit.remove()
-            );
-          };
+    console.log(groupedData.get('Component'));
+    function addComponents(event, d) {
+      console.log(event, d);
+      d3.select(this)
+        .append('div').attr('class', 'component-box')
+        .selectAll('.component')
+        .data(d[1])
+        .join(
+          enter => enter.append('div').attr("class", "component").attr("id", d => {
+            let parsedId = d[0].replace(/ /g, "_");
+            return parsedId;
+          }),
+          exit => exit.remove()
+        );
+    };
 
-          // dimensionsDiv.call(addComponents)
+    // dimensionsDiv.call(addComponents)
   };
 
 
