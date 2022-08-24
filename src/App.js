@@ -5,6 +5,8 @@ import basic_needs from './assets/bffa_icons/0_0_basic.png';
 import foundations from './assets/bffa_icons/1_0_foundations.png';
 import opportunity from './assets/bffa_icons/2_0_opportunity.png';
 
+import basicStamp from './assets/stamps/Basic_Knowledge_2.png'
+
 let definitionsCSV = require('./assets/definitions-2021.csv');
 
 
@@ -73,7 +75,7 @@ function App() {
             let id = (d[0]).replace(/ /g, "_");
             return `${id}_title`;
           }).attr('class', 'dimension-title').on('click', addComponents);
-
+          divTitle.append("h3").text('+').attr("class", "dimension_icon");
           //indicator icon 
           // divTitle.append("h3").text('+').attr("class", "dimension_icon");
           //images
@@ -93,8 +95,9 @@ function App() {
 
     console.log(groupedData.get('Component'));
     function addComponents(event, d) {
-      console.log(event, d);
-      d3.select(this)
+      console.log(event, d[1]);
+      console.log(this);
+      d3.select(this.parentNode)
         .append('div').attr('class', 'component-box')
         .selectAll('.component')
         .data(d[1])
@@ -105,6 +108,7 @@ function App() {
           }),
           exit => exit.remove()
         );
+        
     };
 
     // dimensionsDiv.call(addComponents)
