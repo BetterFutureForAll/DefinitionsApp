@@ -91,7 +91,7 @@ function App() {
             .attr("class", (d, i) => { return `dim-${i} dimension`; })
             .attr("id", d => {
               if (d[0].length === 0) {
-                return "footer";
+                return "remove";
               }
               //class and ID to isolate footer
               let id = (d[0]).replace(/ /g, "_");
@@ -101,7 +101,7 @@ function App() {
           //Dimensions Title Bar
           let divTitle = dimDiv.append('div').attr("id", d => {
             if (d[0].length === 0) {
-              return "footer";
+              return "remove";
             }
             //class and ID to isolate footer
             let id = (d[0]).replace(/ /g, "_");
@@ -118,7 +118,7 @@ function App() {
               case 2: return opportunity;
               default: return;
             }
-          }).attr('class', 'dimension_img');
+          }).attr('class', 'dimension-img');
           let componentGroup = dimDiv
             .append('div').attr('class', 'component-box')
             .selectAll('.component')
@@ -136,7 +136,8 @@ function App() {
             console.log(stampSwitch(d));
             return stampSwitch(d);
           }).attr('class', 'component-img');  
-          
+          enter.selectAll('.remove').remove();
+          enter.selectAll('#remove').remove();
 
           return enter;
         });
