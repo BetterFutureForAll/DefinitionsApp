@@ -69,7 +69,6 @@ function App() {
 
   useLayoutEffect(() => {
     parsedDef.then(data => {
-      console.log(data);
       Draw(data);
     })
   }, [])
@@ -77,73 +76,75 @@ function App() {
   function Draw(data) {
     let groupedData = d3.group(data, d => d["Dimension"], d => d["Component"], d => d['Indicator name']);
 
-    let d3ref = d3.select(ref.current);
-    console.log(groupedData);
-    d3ref.selectAll('.dimension')
+    let dimensions = d3.select(ref.current);
+
+    let div = dimensions.selectAll('.dimension')
       .data(groupedData, d => d[0])
       .join(
         enter => {
-          let dimDiv = enter
+          enter
             .append("div")
-            .attr("class", (d, i) => { return `dim-${i} dimension`; })
+            .attr("class", (d, i) => {
+              console.log(d, i);
+              return `dim-${i} dimension`;
+            })
             .attr("id", d => {
-              if (d[0].length === 0) {
-                return "remove";
-              }
-              //class and ID to isolate footer
               let id = (d[0]).replace(/ /g, "_");
               return id;
             });
 
-          //Dimensions Title Bar
-          let divTitle = dimDiv.append('div').attr("id", d => {
-            if (d[0].length === 0) {
-              return "remove";
-            }
-            //class and ID to isolate footer
-            let id = (d[0]).replace(/ /g, "_");
-            return `${id}_title`;
-          }).attr('class', 'dimension-title').on('click', addComponents);
-          divTitle.append("h3").text(d => d[0]).attr("class", "dimension-text");
-          //indicator icon 
-          // divTitle.append("h3").text('+').attr("class", "dimension_icon");
-          //images
-          // divTitle.append("img").attr("src", (d, i) => {
-          //   switch (i) {
-          //     case 0: return basic_needs;
-          //     case 1: return foundations;
-          //     case 2: return opportunity;
-          //     default: return;
-          //   }
-          // }).attr('class', 'dimension-img');
-          let componentGroup = dimDiv
-            .append('div').attr('class', 'component-box')
-            .selectAll('.component')
-            .data(d => d[1])
-            .join(
-              enter => enter.append('div').attr("class", "component").attr("id", d => {
-                let parsedId = d[0].replace(/ /g, "_");
-                return parsedId;
-              }),
-              exit => exit.remove()
-            );
-
-          //text
-          componentGroup
-            .append('p')
-            .text(d => definitionSwitch(d));
-
-          //stamp images
-          componentGroup
-            .append("img").attr("src", (d, i) => {
-              return stampSwitch(d);
-            }).attr('class', 'component-img').on('mouseenter', hideStamp).on('mouseleave', showStamp);
-
-          enter.selectAll('.remove').remove();
-          enter.selectAll('#remove').remove();
-
           return enter;
         });
+
+    //Dimensions Title Bar
+    let divTitle = div.append('div').attr("id", d => {
+      if (d[0].length === 0) {
+        return "remove";
+      }
+      //class and ID to isolate footer
+      let id = (d[0]).replace(/ /g, "_");
+      return `${id}_title`;
+    }).attr('class', 'dimension-title');
+
+    divTitle.append("h3").text(d => d[0]).attr("class", "dimension-text");
+
+    //indicator icon 
+    // divTitle.append("h3").text('+').attr("class", "dimension_icon");
+    //images
+    // divTitle.append("img").attr("src", (d, i) => {
+    //   switch (i) {
+    //     case 0: return basic_needs;
+    //     case 1: return foundations;
+    //     case 2: return opportunity;
+    //     default: return;
+    //   }
+    // }).attr('class', 'dimension-img');
+    let componentGroup = div
+      .append('div').attr('class', 'component-box')
+      .selectAll('.component')
+      .data(d => d[1])
+      .join(
+        enter => enter.append('div').attr("class", "component").attr("id", d => {
+          let parsedId = d[0].replace(/ /g, "_");
+          return parsedId;
+        }),
+        exit => exit.remove()
+      );
+    //component title
+    componentGroup
+      .append('h4').text(d => d[0])
+    //text
+    componentGroup
+      .append('p')
+      .text(d => definitionSwitch(d));
+
+    //stamp images
+    componentGroup
+      .append("img").attr("src", (d, i) => {
+        return stampSwitch(d);
+      }).attr('class', 'component-img').on('mouseenter', hideStamp).on('mouseleave', showStamp);
+
+
 
     function hideStamp(event, d) {
       d3.select(this).style("opacity", 0)
@@ -151,13 +152,7 @@ function App() {
     function showStamp(event, d) {
       d3.selectAll('.component-img').style("opacity", 100)
     }
-    function addComponents(event, d) {
-      console.log(event, d[1]);
-      console.log(this);
 
-    };
-
-    // dimensionsDiv.call(addComponents)
   };
 
 
