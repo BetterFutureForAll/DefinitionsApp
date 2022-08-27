@@ -2,21 +2,20 @@ import './App.css';
 import * as d3 from 'd3';
 import React, { useLayoutEffect, useRef } from 'react';
 
-import advancedEducationStamp from './assets/stamps/Advanced_Education.png';
-import basicKnowledgeStamp from './assets/stamps/Basic_Knowledge_2.png';
-import environmentalQualityStamp from './assets/stamps/Environmental_Quality.png';
-import healthAndWellnessStamp from './assets/stamps/Health_And_Wellness.png';
-import inclusivenessStamp from './assets/stamps/Inclusiveness.png';
-import infoAndCommunicationsStamp from './assets/stamps/Info_And_Communications.png';
-import nutritionAndMedicalStamp from './assets/stamps/Nutrition_Medical_Care.png';
-import personalFreedomStamp from './assets/stamps/Personal_Freedom_and_Choice.png';
-import personalRightsStamp from './assets/stamps/Personal_Rights.png';
-import personalSafetyStamp from './assets/stamps/Personal_Safety.png';
-import shelterStamp from './assets/stamps/Shelter.png';
-import waterAndSanitationStamp from './assets/stamps/Water_Sanitation.png';
+import advancedEducationStamp from './assets/stamps/advanced_Education.png';
+import basicKnowledgeStamp from './assets/stamps/basic_Knowledge_2.png';
+import environmentalQualityStamp from './assets/stamps/environmental_Quality.png';
+import healthAndWellnessStamp from './assets/stamps/health_And_Wellness.png';
+import inclusivenessStamp from './assets/stamps/inclusiveness.png';
+import infoAndCommunicationsStamp from './assets/stamps/info_And_Communications.png';
+import nutritionAndMedicalStamp from './assets/stamps/nutrition_Medical_Care.png';
+import personalFreedomStamp from './assets/stamps/personal_Freedom_and_Choice.png';
+import personalRightsStamp from './assets/stamps/personal_Rights.png';
+import personalSafetyStamp from './assets/stamps/personal_Safety.png';
+import shelterStamp from './assets/stamps/shelter.png';
+import waterAndSanitationStamp from './assets/stamps/water_Sanitation.png';
 
 let definitionsCSV = require('./assets/definitions-2021.csv');
-
 
 let parsedDef = d3.csv(definitionsCSV, function (data) {
   return data['Dimension'].length > 0 ? data : null;
