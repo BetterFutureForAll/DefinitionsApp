@@ -2,8 +2,8 @@ import './App.css';
 import * as d3 from 'd3';
 import React, { useLayoutEffect, useRef } from 'react';
 
-import advancedEducationStamp from './assets/stamps/advanced_education.png';
-import basicKnowledgeStamp from './assets/stamps/basic_knowledge.png';
+import advancedEducationStamp from './assets/stamps/advanced-education.png';
+import basicKnowledgeStamp from './assets/stamps/basic-knowledge.png';
 import environmentalQualityStamp from './assets/stamps/environmental-quality.png';
 import healthAndWellnessStamp from './assets/stamps/health-and-wellness.png';
 import inclusivenessStamp from './assets/stamps/inclusiveness_.png';
