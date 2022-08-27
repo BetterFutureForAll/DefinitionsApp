@@ -2,18 +2,18 @@ import './App.css';
 import * as d3 from 'd3';
 import React, { useLayoutEffect, useRef } from 'react';
 
-import advancedEducationStamp from './assets/stamps/advanced_Education.png';
-import basicKnowledgeStamp from './assets/stamps/basic_Knowledge_2.png';
-import environmentalQualityStamp from './assets/stamps/environmental_Quality.png';
-import healthAndWellnessStamp from './assets/stamps/health_And_Wellness.png';
-import inclusivenessStamp from './assets/stamps/inclusiveness.png';
-import infoAndCommunicationsStamp from './assets/stamps/info_And_Communications.png';
-import nutritionAndMedicalStamp from './assets/stamps/nutrition_Medical_Care.png';
-import personalFreedomStamp from './assets/stamps/personal_Freedom_and_Choice.png';
-import personalRightsStamp from './assets/stamps/personal_Rights.png';
-import personalSafetyStamp from './assets/stamps/personal_Safety.png';
-import shelterStamp from './assets/stamps/shelter.png';
-import waterAndSanitationStamp from './assets/stamps/water_Sanitation.png';
+import advancedEducationStamp from './assets/stamps/advanced_education.png';
+import basicKnowledgeStamp from './assets/stamps/basic_knowledge.png';
+import environmentalQualityStamp from './assets/stamps/environmental-quality.png';
+import healthAndWellnessStamp from './assets/stamps/health-and-wellness.png';
+import inclusivenessStamp from './assets/stamps/inclusiveness_.png';
+import infoAndCommunicationsStamp from './assets/stamps/info-and-comm.png';
+import nutritionAndMedicalStamp from './assets/stamps/nutrition.png';
+import personalFreedomStamp from './assets/stamps/freedom.png';
+import personalRightsStamp from './assets/stamps/rights.png';
+import personalSafetyStamp from './assets/stamps/safety.png';
+import shelterStamp from './assets/stamps/shelter_.png';
+import waterAndSanitationStamp from './assets/stamps/water-sanitation.png';
 
 let definitionsCSV = require('./assets/definitions-2021.csv');
 
