@@ -22,11 +22,11 @@ let definitionsCSV = require('./assets/definitions-2021.csv');
 
 
 let parsedDef = d3.csv(definitionsCSV, function (data) {
-  return data;
+  return data['Dimension'].length > 0 ? data : null;
 });
 
 let definitionSwitch = (d) => {
-  switch (d[0]) {
+  switch (d[0].replace(/ /g, "_")) {
     case "Nutrition_and_Basic_Medical_Care": return 'Do people have enough food to eat and are they receiving basic medical care? ';
     case "Water_and_Sanitation": return 'Can people drink water and keep themselves clean without getting sick?';
     case "Shelter": return 'Do people have adequate housing with basic utilities?';
@@ -53,7 +53,7 @@ let stampSwitch = (d) => {
     case "Shelter": return shelterStamp;
     case "Personal_Safety": return personalSafetyStamp;
 
-    case "Access_to_Basic_Knowledge": return advancedEducationStamp;
+    case "Access_to_Basic_Knowledge": return basicKnowledgeStamp;
     case "Access_to_Information_and_Communications": return infoAndCommunicationsStamp;
     case "Health_and_Wellness": return healthAndWellnessStamp;
     case "Environmental_Quality": return environmentalQualityStamp;
@@ -73,6 +73,7 @@ function App() {
 
   useLayoutEffect(() => {
     parsedDef.then(data => {
+      console.log(data);
       Draw(data);
     })
   }, [])
@@ -107,18 +108,18 @@ function App() {
             let id = (d[0]).replace(/ /g, "_");
             return `${id}_title`;
           }).attr('class', 'dimension-title').on('click', addComponents);
-          divTitle.append("h3").text('+').attr("class", "dimension_icon");
+          divTitle.append("h3").text(d => d[0]).attr("class", "dimension-text");
           //indicator icon 
           // divTitle.append("h3").text('+').attr("class", "dimension_icon");
           //images
-          divTitle.append("img").attr("src", (d, i) => {
-            switch (i) {
-              case 0: return basic_needs;
-              case 1: return foundations;
-              case 2: return opportunity;
-              default: return;
-            }
-          }).attr('class', 'dimension-img');
+          // divTitle.append("img").attr("src", (d, i) => {
+          //   switch (i) {
+          //     case 0: return basic_needs;
+          //     case 1: return foundations;
+          //     case 2: return opportunity;
+          //     default: return;
+          //   }
+          // }).attr('class', 'dimension-img');
           let componentGroup = dimDiv
             .append('div').attr('class', 'component-box')
             .selectAll('.component')
@@ -130,20 +131,30 @@ function App() {
               }),
               exit => exit.remove()
             );
+
+          //text
           componentGroup
-          .append("img").attr("src", (d, i) => {
-            console.log(d, d[0]);
-            console.log(stampSwitch(d));
-            return stampSwitch(d);
-          }).attr('class', 'component-img');  
+            .append('p')
+            .text(d => definitionSwitch(d));
+
+          //stamp images
+          componentGroup
+            .append("img").attr("src", (d, i) => {
+              return stampSwitch(d);
+            }).attr('class', 'component-img').on('mouseenter', hideStamp).on('mouseleave', showStamp);
+
           enter.selectAll('.remove').remove();
           enter.selectAll('#remove').remove();
 
           return enter;
         });
 
-
-    console.log(groupedData.get('Component'));
+    function hideStamp(event, d) {
+      d3.select(this).style("opacity", 0)
+    }
+    function showStamp(event, d) {
+      d3.selectAll('.component-img').style("opacity", 100)
+    }
     function addComponents(event, d) {
       console.log(event, d[1]);
       console.log(this);
