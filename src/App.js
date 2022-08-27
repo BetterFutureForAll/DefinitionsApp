@@ -1,9 +1,6 @@
 import './App.css';
 import * as d3 from 'd3';
 import React, { useLayoutEffect, useRef } from 'react';
-import basic_needs from './assets/bffa_icons/0_0_basic.png';
-import foundations from './assets/bffa_icons/1_0_foundations.png';
-import opportunity from './assets/bffa_icons/2_0_opportunity.png';
 
 import advancedEducationStamp from './assets/stamps/Advanced_Education.png';
 import basicKnowledgeStamp from './assets/stamps/Basic_Knowledge_2.png';
@@ -83,7 +80,7 @@ function App() {
 
     let d3ref = d3.select(ref.current);
     console.log(groupedData);
-    let dimensionDiv = d3ref.selectAll('.dimension')
+    d3ref.selectAll('.dimension')
       .data(groupedData, d => d[0])
       .join(
         enter => {
