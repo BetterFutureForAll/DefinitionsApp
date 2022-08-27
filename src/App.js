@@ -6,13 +6,13 @@ import advancedEducationStamp from './assets/stamps/advanced-education.png';
 import basicKnowledgeStamp from './assets/stamps/basic-knowledge.png';
 import environmentalQualityStamp from './assets/stamps/environmental-quality.png';
 import healthAndWellnessStamp from './assets/stamps/health-and-wellness.png';
-import inclusivenessStamp from './assets/stamps/inclusiveness_.png';
+import inclusivenessStamp from './assets/stamps/inclusiveness.png';
 import infoAndCommunicationsStamp from './assets/stamps/info-and-comm.png';
 import nutritionAndMedicalStamp from './assets/stamps/nutrition.png';
 import personalFreedomStamp from './assets/stamps/freedom.png';
 import personalRightsStamp from './assets/stamps/rights.png';
 import personalSafetyStamp from './assets/stamps/safety.png';
-import shelterStamp from './assets/stamps/shelter_.png';
+import shelterStamp from './assets/stamps/shelter.png';
 import waterAndSanitationStamp from './assets/stamps/water-sanitation.png';
 
 let definitionsCSV = require('./assets/definitions-2021.csv');
