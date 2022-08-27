@@ -32,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -44,7 +45,6 @@
   padding: 2px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.5);
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.47);
   overflow: scroll;
   text-align: left;
   display: flex;
@@ -56,12 +56,14 @@
 .dimension {
   display: flex;
   flex-direction: row;
-  box-sizing: border-box;
+  box-sizing: border-box;  
+  padding-right: .5em;
+  height: 30vh;
 }
 
 .dim-0 {
   box-sizing: border-box;
-
+  border-radius: 10px;
   background-color: rgb(37, 150, 190, 0.35);
   border-style: solid;
   border-width: 1px;
@@ -69,48 +71,68 @@
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
 }
 
-.dim-1{
+.dim-1 {
   box-sizing: border-box;
-
   border-radius: 10px;
-  background-color: rgba(249,164,86, 0.35);
+
+  background-color: rgba(249, 164, 86, 0.35);
   border-style: solid;
   border-width: 1px;
   border-color: rgb(0, 0, 0);
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
 }
 
-.dim-2{
+.dim-2 {
   box-sizing: border-box;
-
   border-radius: 10px;
-  background-color: rgba(156,193,109, 0.47);
+  background-color: rgba(156, 193, 109, 0.47);
   border-style: solid;
   border-width: 1px;
   border-color: rgb(0, 0, 0);
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
 }
+
 .dimension-img {
   height: 15em;
   width: 15em;
 }
+.dimension-text {
+  writing-mode: vertical-lr;
+  text-orientation: sideways;
+}
+
 .component-box {
   display: flex;
   width: 100%;
-  height: fit-content;
+  height: 100%;
   box-sizing: border-box;
 }
+
 .component-img {
+  position: relative;
   display: block;
   height: 100%;
   width: 100%;
+  z-index: 1;
+}
+
+.component h4 {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: .5em;
+  width: 95%;
+  text-align: center;
+  transform: translate(-50%, -50%);
 }
 
 .component p {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
 }
 
 .component {
