@@ -93,7 +93,7 @@ function App() {
             });
 
           //Dimensions Title Bar
-          let divTitle = div.append('div').attr("id", d => {
+          let divTitle = div.append('h3').attr("id", d => {
             if (d[0].length === 0) {
               return "remove";
             }
@@ -102,7 +102,7 @@ function App() {
             return `${id}_title`;
           }).attr('class', 'dimension-title');
 
-          divTitle.append("h3").text(d => d[0]).attr("class", "dimension-text");
+          divTitle.text(d => d[0]).attr("class", "dimension-text");
 
           //indicator icon 
           // divTitle.append("h3").text('+').attr("class", "dimension_icon");
@@ -133,7 +133,15 @@ function App() {
           componentGroup
             .append('p')
             .text(d => definitionSwitch(d));
-
+          //Link to indicators  
+          componentGroup
+            .append("ul")
+            .selectAll('li')
+            .data(d => d[1])
+            .join('li')
+            .text(d => {
+              return d[0]
+            })
           //stamp images
           componentGroup
             .append("img").attr("src", (d, i) => {
