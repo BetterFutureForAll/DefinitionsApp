@@ -4,16 +4,16 @@ import React, { useLayoutEffect, useRef } from 'react';
 
 import advancedEducationStamp from './assets/stamps/advanced-education.png';
 import basicKnowledgeStamp from './assets/stamps/basic-knowledge.png';
-import environmentalQualityStamp from './assets/stamps/environmental-quality.png';
-import healthAndWellnessStamp from './assets/stamps/health-and-wellness.png';
+import environmentalQualityStamp from './assets/stamps/environment.png';
+import healthAndWellnessStamp from './assets/stamps/health.png';
 import inclusivenessStamp from './assets/stamps/inclusiveness.png';
-import infoAndCommunicationsStamp from './assets/stamps/info-and-comm.png';
+import infoAndCommunicationsStamp from './assets/stamps/communications.png';
 import nutritionAndMedicalStamp from './assets/stamps/nutrition.png';
-import personalFreedomStamp from './assets/stamps/freedom.png';
+import personalFreedomStamp from './assets/stamps/choice.png';
 import personalRightsStamp from './assets/stamps/rights.png';
 import personalSafetyStamp from './assets/stamps/safety.png';
 import shelterStamp from './assets/stamps/shelter.png';
-import waterAndSanitationStamp from './assets/stamps/water-sanitation.png';
+import waterAndSanitationStamp from './assets/stamps/water.png';
 
 let definitionsCSV = require('./assets/definitions-2021.csv');
 
@@ -104,17 +104,6 @@ function App() {
 
           divTitle.text(d => d[0]).attr("class", "dimension-text");
 
-          //indicator icon 
-          // divTitle.append("h3").text('+').attr("class", "dimension_icon");
-          //images
-          // divTitle.append("img").attr("src", (d, i) => {
-          //   switch (i) {
-          //     case 0: return basic_needs;
-          //     case 1: return foundations;
-          //     case 2: return opportunity;
-          //     default: return;
-          //   }
-          // }).attr('class', 'dimension-img');
           let componentGroup = div
             .append('div').attr('class', 'component-box')
             .selectAll('.component')
@@ -133,14 +122,16 @@ function App() {
           componentGroup
             .append('p')
             .text(d => definitionSwitch(d));
+
           //Link to indicators  
           componentGroup
             .append("ul")
             .selectAll('li')
             .data(d => d[1])
             .join('li')
+            .text(d => d[0]).append("title")
             .text(d => {
-              return d[0]
+              return `${d[1][0]['Source']}`
             })
           //stamp images
           componentGroup
@@ -157,10 +148,10 @@ function App() {
 
 
     function hideStamp(event, d) {
-      d3.select(this).style("opacity", 0)
+      d3.select(this).style("opacity", 0);
     }
     function showStamp(event, d) {
-      d3.selectAll('.component-img').style("opacity", 100)
+      d3.selectAll('.component-img').style("opacity", 100);
     }
 
   };
