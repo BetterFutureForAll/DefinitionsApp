@@ -104,17 +104,6 @@ function App() {
 
           divTitle.text(d => d[0]).attr("class", "dimension-text");
 
-          //indicator icon 
-          // divTitle.append("h3").text('+').attr("class", "dimension_icon");
-          //images
-          // divTitle.append("img").attr("src", (d, i) => {
-          //   switch (i) {
-          //     case 0: return basic_needs;
-          //     case 1: return foundations;
-          //     case 2: return opportunity;
-          //     default: return;
-          //   }
-          // }).attr('class', 'dimension-img');
           let componentGroup = div
             .append('div').attr('class', 'component-box')
             .selectAll('.component')
@@ -133,23 +122,17 @@ function App() {
           componentGroup
             .append('p')
             .text(d => definitionSwitch(d));
+
           //Link to indicators  
           componentGroup
             .append("ul")
             .selectAll('li')
             .data(d => d[1])
             .join('li')
+            .text(d => d[0]).append("title")
             .text(d => {
-              console.log(d[1][0]);
-              return d[0]
-            }).append("title")
-            // .attr("href", d => { return `${d[1][0]['Link']}` })
-            .text(d => {
-              return `${d[1][0]['Source']} ⓘ`
+              return `${d[1][0]['Source']}`
             })
-            // .attr("class", "indicator-source")
-            // .attr("target", "_blank")
-            // .attr("rel", "noopener noreferrer");
           //stamp images
           componentGroup
             .append("img").attr("src", (d, i) => {
@@ -165,8 +148,6 @@ function App() {
 
 
     function hideStamp(event, d) {
-      // d3.selectAll('.component-img').style("opacity", 100);
-      // d3.select(this).style("opacity", 50);
       d3.select(this).style("opacity", 0);
     }
     function showStamp(event, d) {
