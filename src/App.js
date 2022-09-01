@@ -4,16 +4,16 @@ import React, { useLayoutEffect, useRef } from 'react';
 
 import advancedEducationStamp from './assets/stamps/advanced-education.png';
 import basicKnowledgeStamp from './assets/stamps/basic-knowledge.png';
-import environmentalQualityStamp from './assets/stamps/environmental-quality.png';
-import healthAndWellnessStamp from './assets/stamps/health-and-wellness.png';
+import environmentalQualityStamp from './assets/stamps/environment.png';
+import healthAndWellnessStamp from './assets/stamps/health.png';
 import inclusivenessStamp from './assets/stamps/inclusiveness.png';
-import infoAndCommunicationsStamp from './assets/stamps/info-and-comm.png';
+import infoAndCommunicationsStamp from './assets/stamps/communications.png';
 import nutritionAndMedicalStamp from './assets/stamps/nutrition.png';
-import personalFreedomStamp from './assets/stamps/freedom.png';
+import personalFreedomStamp from './assets/stamps/choice.png';
 import personalRightsStamp from './assets/stamps/rights.png';
 import personalSafetyStamp from './assets/stamps/safety.png';
 import shelterStamp from './assets/stamps/shelter.png';
-import waterAndSanitationStamp from './assets/stamps/water-sanitation.png';
+import waterAndSanitationStamp from './assets/stamps/water.png';
 
 let definitionsCSV = require('./assets/definitions-2021.csv');
 
@@ -140,8 +140,16 @@ function App() {
             .data(d => d[1])
             .join('li')
             .text(d => {
+              console.log(d[1][0]);
               return d[0]
+            }).append("title")
+            // .attr("href", d => { return `${d[1][0]['Link']}` })
+            .text(d => {
+              return `${d[1][0]['Source']} ⓘ`
             })
+            // .attr("class", "indicator-source")
+            // .attr("target", "_blank")
+            // .attr("rel", "noopener noreferrer");
           //stamp images
           componentGroup
             .append("img").attr("src", (d, i) => {
@@ -157,10 +165,12 @@ function App() {
 
 
     function hideStamp(event, d) {
-      d3.select(this).style("opacity", 0)
+      // d3.selectAll('.component-img').style("opacity", 100);
+      // d3.select(this).style("opacity", 50);
+      d3.select(this).style("opacity", 0);
     }
     function showStamp(event, d) {
-      d3.selectAll('.component-img').style("opacity", 100)
+      d3.selectAll('.component-img').style("opacity", 100);
     }
 
   };
