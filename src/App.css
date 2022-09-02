@@ -13,6 +13,12 @@
   }
 }
 
+@font-face {
+  font-family: 'Noteworthy';
+  src: local('Notworthy-Lt'), url(./assets/fonts/Noteworthy-Lt.ttf) format('ttf');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -62,7 +68,7 @@
   align-items: stretch;
   box-sizing: border-box;
   overflow: hidden;
-
+  font-family: 'Noteworthy';
 }
 
 .dimension {
