@@ -68,7 +68,7 @@
   align-items: stretch;
   box-sizing: border-box;
   overflow: hidden;
-  font-family: 'Noteworthy';
+  font-family: 'Noteworthy', Fallback, sans-serif;
 }
 
 .dimension {
