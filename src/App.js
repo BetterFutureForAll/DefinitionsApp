@@ -15,10 +15,6 @@ import personalSafetyStamp from './assets/stamps/safety.png';
 import shelterStamp from './assets/stamps/shelter.png';
 import waterAndSanitationStamp from './assets/stamps/water.png';
 
-import red from './assets/red.jpg';
-import blue from './assets/blue.jpg';
-import green from './assets/green.jpg';
-
 let definitionsCSV = require('./assets/definitions-2021.csv');
 
 let parsedDef = d3.csv(definitionsCSV, function (data) {
@@ -145,26 +141,23 @@ function App() {
 
           //component title
           componentGroup
-            .append('div')
-            .attr("id", d=> regEx(d[0]))
-            .attr("class", "component-title-box")
-            .style("background-image", (d,i)=> {
-              if(i % 2 === 0) return `url(${red})`
-              if(i % 2 === 1) return `url(${blue})`
-            })
-            .append('h4').text(d => d[0]).attr("class", "component-title");
+            // .append('div')
+            // .attr("id", d=> regEx(d[0]))
+            // .attr("class", "component-title-box")
+            // .style("background-image", (d,i)=> {
+            //   if(i % 2 === 0) return `url(${red})`
+            //   if(i % 2 === 1) return `url(${blue})`
+            // })
+            .append('h6').text(d => d[0]).attr("class", "component-title");
             
           return enter;
 
         });
 
     function hideStamp(event, d) {
-      // d3.select(this).style("opacity", 0);
-      console.log(d3.select(this));
       d3.select(this).select('.component-img').classed('active', true);
     }
     function showStamp(event, d) {
-      // d3.selectAll('.component-img').style("opacity", 100);
       d3.selectAll('.component-img').classed('active', false);
     }
 
