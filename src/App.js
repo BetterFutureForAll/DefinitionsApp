@@ -25,8 +25,28 @@ let regEx = (d) => {
   return d.replace(/ /g, "_");
 }
 
+let textColorSwitch = (d) => {
+  switch (regEx(d[0])) {
+    case "Nutrition_and_Basic_Medical_Care": return 'rgb(225, 100, 100)';
+    case "Water_and_Sanitation": return 'rgb(0, 150, 225)';
+    case "Shelter": return 'rgb(255, 100, 255)';
+    case "Personal_Safety": return 'rgb(100, 245, 25)';
+
+    case "Access_to_Basic_Knowledge": return 'rgb(255, 150, 150)';
+    case "Access_to_Information_and_Communications": return 'rgb(255, 200, 80)';
+    case "Health_and_Wellness": return 'rgb(225, 80, 225)';
+    case "Environmental_Quality": return 'rgb(75, 250, 0)';
+
+    case "Personal_Rights": return 'rgb(255, 178, 102)';
+    case "Personal_Freedom_and_Choice": return 'rgb(255, 155, 255)';
+    case "Inclusiveness": return 'rgb(75, 255, 255)';
+    case "Access_to_Advanced_Education": return 'rgb(255, 255, 0)';
+
+    default: return '';
+  }
+};
 let definitionSwitch = (d) => {
-  switch (d[0].replace(/ /g, "_")) {
+  switch (regEx(d[0])) {
     case "Nutrition_and_Basic_Medical_Care": return 'Do people have enough food to eat and are they receiving basic medical care? ';
     case "Water_and_Sanitation": return 'Can people drink water and keep themselves clean without getting sick?';
     case "Shelter": return 'Do people have adequate housing with basic utilities?';
@@ -141,14 +161,8 @@ function App() {
 
           //component title
           componentGroup
-            // .append('div')
-            // .attr("id", d=> regEx(d[0]))
-            // .attr("class", "component-title-box")
-            // .style("background-image", (d,i)=> {
-            //   if(i % 2 === 0) return `url(${red})`
-            //   if(i % 2 === 1) return `url(${blue})`
-            // })
-            .append('h6').text(d => d[0]).attr("class", "component-title");
+            .append('h6').text(d => d[0]).attr("class", "component-title")
+            .style("background-color", d => textColorSwitch(d));
             
           return enter;
 
