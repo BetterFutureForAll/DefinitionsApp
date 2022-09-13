@@ -15,11 +15,19 @@ import personalSafetyStamp from './assets/stamps/safety.png';
 import shelterStamp from './assets/stamps/shelter.png';
 import waterAndSanitationStamp from './assets/stamps/water.png';
 
+import red from './assets/red.jpg';
+import blue from './assets/blue.jpg';
+import green from './assets/green.jpg';
+
 let definitionsCSV = require('./assets/definitions-2021.csv');
 
 let parsedDef = d3.csv(definitionsCSV, function (data) {
   return data['Dimension'].length > 0 ? data : null;
 });
+
+let regEx = (d) => {
+  return d.replace(/ /g, "_");
+}
 
 let definitionSwitch = (d) => {
   switch (d[0].replace(/ /g, "_")) {
@@ -43,7 +51,7 @@ let definitionSwitch = (d) => {
 };
 
 let stampSwitch = (d) => {
-  switch (d[0].replace(/ /g, "_")) {
+  switch (regEx(d[0])) {
     case "Nutrition_and_Basic_Medical_Care": return nutritionAndMedicalStamp;
     case "Water_and_Sanitation": return waterAndSanitationStamp;
     case "Shelter": return shelterStamp;
@@ -88,7 +96,7 @@ function App() {
               return `dim-${i} dimension`;
             })
             .attr("id", d => {
-              let id = (d[0]).replace(/ /g, "_");
+              let id = regEx(d[0]);
               return id;
             });
 
@@ -98,7 +106,7 @@ function App() {
               return "remove";
             }
             //class and ID to isolate footer
-            let id = (d[0]).replace(/ /g, "_");
+            let id = regEx(d[0]);
             return `${id}_title`;
           }).attr('class', 'dimension-title');
 
@@ -109,15 +117,11 @@ function App() {
             .selectAll('.component')
             .data(d => d[1])
             .join(
-              enter => enter.append('div').attr("class", "component").attr("id", d => {
-                let parsedId = d[0].replace(/ /g, "_");
-                return parsedId;
-              }),
+              enter => enter.append('div').attr("class", "component").attr("id", d => regEx(d[0])).on('mouseenter', hideStamp)
+              .on('mouseleave', showStamp),
               exit => exit.remove()
             );
-          //component title
-          componentGroup
-            .append('h4').text(d => d[0])
+
           //text
           componentGroup
             .append('p')
@@ -132,26 +136,36 @@ function App() {
             .text(d => d[0]).append("title")
             .text(d => {
               return `${d[1][0]['Source']}`
-            })
+            });
+
           //stamp images
           componentGroup
-            .append("img").attr("src", (d, i) => {
-              return stampSwitch(d);
-            }).attr('class', 'component-img').on('mouseenter', hideStamp).on('mouseleave', showStamp);
+            .append("img").attr("src", d => stampSwitch(d))
+            .attr('class', 'component-img').attr('pointer-events', 'none');
 
-
+          //component title
+          componentGroup
+            .append('div')
+            .attr("id", d=> regEx(d[0]))
+            .attr("class", "component-title-box")
+            .style("background-image", (d,i)=> {
+              if(i % 2 === 0) return `url(${red})`
+              if(i % 2 === 1) return `url(${blue})`
+            })
+            .append('h4').text(d => d[0]).attr("class", "component-title");
+            
           return enter;
 
         });
 
-
-
-
     function hideStamp(event, d) {
-      d3.select(this).style("opacity", 0);
+      // d3.select(this).style("opacity", 0);
+      console.log(d3.select(this));
+      d3.select(this).select('.component-img').classed('active', true);
     }
     function showStamp(event, d) {
-      d3.selectAll('.component-img').style("opacity", 100);
+      // d3.selectAll('.component-img').style("opacity", 100);
+      d3.selectAll('.component-img').classed('active', false);
     }
 
   };
