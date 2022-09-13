@@ -1,65 +1,19 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 @font-face {
   font-family: 'Noteworthy';
   src: local('Notworthy-Lt'), url(./assets/fonts/Noteworthy-Lt.ttf) format('ttf');
-  /* other formats include: 'woff2', 'truetype, 'opentype',
-                            'embedded-opentype', and 'svg' */
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* 
+  other formats include: 
+  'woff2', 'truetype, 'opentype',
+  'embedded-opentype', and 'svg' 
+  */
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+@keyframes slide {
 
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes slide-up {
-  from {
-    margin-top: 50%;
-  }
-
-  50% {
-    margin-left: 0;
-  }
-
-  to {
-    margin-left: 500px;
-  }
-}
-
-@keyframes slideEM {
   0% {
     margin-top: 0
   }
@@ -74,17 +28,25 @@
 }
 
 .definitionsApp {
-  width: 100vw;
-  height: 100vh;
-  margin: 10px;
+  width: calc(100vw - 10px);
+  height: calc(100vh - 10px);
+  margin: 5px;
   padding: 2px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.5);
   text-align: left;
+
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  /*
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 2px;
+  */
   box-sizing: border-box;
+  contain: content;
   overflow: hidden;
   font-family: 'Noteworthy', Fallback, sans-serif;
 }
@@ -96,8 +58,8 @@
   padding-right: 10px;
   align-items: center;
   justify-content: center;
-  height: 32vh;
-  width: 95vw;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -155,10 +117,22 @@
 
 .component-box {
   display: flex;
-  width: 100%;
+  flex-wrap: wrap;
+  width: max-content;
   height: 100%;
   justify-content: space-evenly;
   box-sizing: border-box;
+  contain: content;
+}
+
+.component {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 22vw;
+  height: 100%;
+  flex: 1 0 calc(25% - 10px);
+  contain: content;
 }
 
 .component-img {
@@ -170,20 +144,21 @@
 }
 
 .component-img.active {
-  animation-name: slideEM;
+  animation-name: slide;
   animation-duration: 1000ms;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
 
 .component h6 {
-  background-color: pink;
+  background-color: white;
   position: absolute;
-  left: 45%;
-  top: 10%;
+  top: 3%;
+  left: 11%;
   min-width: fit-content;
   text-align: center;
-  transform: translate(-50%, -50%);
+  padding: 0px 3px 0px 3px;
+  border-style: solid;
 }
 
 .component ul {
@@ -196,6 +171,8 @@
 
 .component li {
   width: 100%;
+  font-size: smaller;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .component p {
@@ -205,10 +182,4 @@
   transform: translate(-50%, -50%);
   width: 90%;
   text-align: center;
-}
-
-.component {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
 }
