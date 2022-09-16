@@ -12,18 +12,33 @@
   color: #61dafb;
 }
 
-@keyframes slide {
+@keyframes slideOut {
 
   0% {
     margin-top: 0
   }
 
   10% {
-    margin-top: -10%;
+    margin-top: 1rem;
   }
 
   100% {
-    margin-top: -110%
+    margin-top: 200rem
+  }
+}
+
+@keyframes slideIn {
+
+  0% {
+    margin-top: 200rem
+  }
+
+  10% {
+    margin-top: 1rem;
+  }
+
+  100% {
+    margin-top: 0;
   }
 }
 
@@ -35,21 +50,14 @@
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.5);
   text-align: left;
-
   display: flex;
   flex-direction: column;
-  /*
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 2px;
-  */
   box-sizing: border-box;
   contain: content;
   overflow: hidden;
   font-family: 'Noteworthy', Fallback, sans-serif;
 }
+
 
 .dimension {
   display: flex;
@@ -74,6 +82,7 @@
     url('./assets/blue.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  grid-area: dim0;
 }
 
 .dim-1 {
@@ -87,6 +96,8 @@
     url('./assets/green.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  grid-area: dim1;
+
 }
 
 .dim-2 {
@@ -100,6 +111,7 @@
     url('./assets/red.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  grid-area: dim2;
 }
 
 .dimension-img {
@@ -115,6 +127,71 @@
   text-align: center;
 }
 
+@media only screen and (max-width: 992px) {
+/*
+  .definitionsApp {
+    width: calc(100vw - 10px);
+    height: calc(100vh - 10px);
+    margin: 5px;
+    padding: 2px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: start;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: repeat(3, 100vh);
+    grid-column-gap: 1px;
+    grid-row-gap: 0px;
+    grid-template-areas:
+      "dim0"
+      "dim1"
+      "dim2";
+    box-sizing: border-box;
+    flex-direction: row;
+    contain: content;
+    overflow-y: scroll;
+    font-family: 'Noteworthy', Fallback, sans-serif;
+  }
+
+  .dimension {
+    display: flex;
+    flex-direction: column !important;
+    width: calc(100vw - 20px);
+    height: calc(100vh - 20px);
+  }
+
+  .dimension-text {
+    width: 100%;
+    writing-mode: unset;
+    text-align: center;
+    text-orientation: upright;
+    transform: none;
+  }
+  .component-box {
+    flex-direction: column;
+    width: 100%;
+  }
+  .component {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 40%;
+    flex: 1 0 calc(45% - 10px);
+    contain: content;
+  }
+  
+  .component-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    contain: content;
+  }
+*/
+}
+
 .component-box {
   display: flex;
   flex-wrap: wrap;
@@ -128,10 +205,10 @@
 .component {
   position: relative;
   display: block;
-  box-sizing: border-box;
-  width: 22vw;
-  height: 100%;
+  width: 250px;
+  height: 250px;
   flex: 1 0 calc(25% - 10px);
+  box-sizing: border-box;
   contain: content;
 }
 
@@ -141,24 +218,29 @@
   height: 100%;
   width: 100%;
   overflow-x: hidden;
-}
-
-.component-img.active {
-  animation-name: slide;
+  animation-name: slideIn;
   animation-duration: 1000ms;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
 
-.component h6 {
+.component-img.active {
+  animation-name: slideOut;
+  animation-duration: 1000ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.component h5 {
   background-color: white;
   position: absolute;
-  top: 3%;
-  left: 11%;
-  min-width: fit-content;
+  top: 1%;
+  left: 10%;
+  width: 50%;
   text-align: center;
-  padding: 0px 3px 0px 3px;
+  padding: 0px 2px 0px 2px;
   border-style: solid;
+  border-width: 1px;
 }
 
 .component ul {
@@ -172,7 +254,7 @@
 .component li {
   width: 100%;
   font-size: smaller;
-  background-color: rgba(255, 255, 255, 0.5);
+  font-family: Helvetica;
 }
 
 .component p {
@@ -182,4 +264,7 @@
   transform: translate(-50%, -50%);
   width: 90%;
   text-align: center;
+  font-size: small;
+  font-family: Helvetica;
+
 }
