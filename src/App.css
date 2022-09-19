@@ -12,18 +12,29 @@
   color: #61dafb;
 }
 
-@keyframes slide {
+@keyframes slideOut {
 
   0% {
     margin-top: 0
   }
 
-  10% {
-    margin-top: -10%;
+  50%  {
+    margin-top: 10%;
   }
 
   100% {
-    margin-top: -110%
+    margin-top: 92%;
+  }
+}
+
+@keyframes slideIn {
+
+  0% {
+    margin-top: 92%
+  }
+
+  100% {
+    margin-top: 0;
   }
 }
 
@@ -35,31 +46,24 @@
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.5);
   text-align: left;
-
   display: flex;
   flex-direction: column;
-  /*
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 2px;
-  */
   box-sizing: border-box;
   contain: content;
   overflow: hidden;
   font-family: 'Noteworthy', Fallback, sans-serif;
 }
 
+
 .dimension {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
-  padding-right: 10px;
   align-items: center;
   justify-content: center;
   height: 100%;
   width: 100%;
+  padding: 2.5px;
   overflow: hidden;
 }
 
@@ -74,6 +78,7 @@
     url('./assets/blue.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  grid-area: dim0;
 }
 
 .dim-1 {
@@ -87,6 +92,8 @@
     url('./assets/green.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  grid-area: dim1;
+
 }
 
 .dim-2 {
@@ -100,6 +107,7 @@
     url('./assets/red.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  grid-area: dim2;
 }
 
 .dimension-img {
@@ -115,55 +123,92 @@
   text-align: center;
 }
 
+@media only screen and (max-width: 992px) {
+  /*
+  .definitionsApp {
+    width: calc(100vw - 10px);
+    height: calc(100vh - 10px);
+    margin: 5px;
+    padding: 2px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: start;
+    overflow-y: scroll;
+    grid-template-columns: 100vw;
+    grid-template-rows: repeat(3, 100vh);
+    grid-column-gap: 1px;
+    grid-row-gap: 0px;
+    grid-template-areas:
+      "dim0"
+      "dim1"
+      "dim2";
+    box-sizing: border-box;
+    flex-direction: row;
+    contain: content;
+    font-family: 'Noteworthy', Fallback, sans-serif;
+    */
+}
+
 .component-box {
   display: flex;
-  flex-wrap: wrap;
-  width: max-content;
   height: 100%;
   justify-content: space-evenly;
   box-sizing: border-box;
   contain: content;
 }
 
+.component:before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
 .component {
   position: relative;
-  display: block;
+  display: flex;
+  height: auto;
   box-sizing: border-box;
-  width: 22vw;
-  height: 100%;
-  flex: 1 0 calc(25% - 10px);
+  aspect-ratio: 1/1;
+  flex: 1 1 auto;
   contain: content;
 }
 
 .component-img {
-  position: relative;
+  position: absolute;
   display: block;
+  overflow-x: hidden;
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
+  animation-name: slideIn;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2000ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 
 .component-img.active {
-  animation-name: slide;
+  animation-name: slideOut;
+  animation-timing-function: ease-in-out;
   animation-duration: 1000ms;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
 
-.component h6 {
+.component h5 {
   background-color: white;
   position: absolute;
-  top: 3%;
-  left: 11%;
-  min-width: fit-content;
+  top: 1%;
+  left: 10%;
+  width: 50%;
   text-align: center;
-  padding: 0px 3px 0px 3px;
+  padding: 0px 2px 0px 2px;
   border-style: solid;
+  border-width: 1px;
 }
 
 .component ul {
   position: absolute;
-  bottom: 10px;
+  top: 35%;
   height: 45%;
   width: 95%;
   box-sizing: border-box;
@@ -172,14 +217,18 @@
 .component li {
   width: 100%;
   font-size: smaller;
-  background-color: rgba(255, 255, 255, 0.5);
+  font-family: Helvetica;
 }
 
 .component p {
   position: absolute;
   left: 50%;
-  top: 25%;
+  top: 26%;
   transform: translate(-50%, -50%);
-  width: 90%;
+  width: 85%;
   text-align: center;
+  font-size: small;
+  font-style: italic;
+  font-family: Helvetica;
+
 }

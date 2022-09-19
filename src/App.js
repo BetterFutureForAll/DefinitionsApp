@@ -161,7 +161,7 @@ function App() {
 
           //component title
           componentGroup
-            .append('h6').text(d => d[0]).attr("class", "component-title")
+            .append('h5').text(d => d[0]).attr("class", "component-title")
             .style("background-color", d => textColorSwitch(d));
             
           return enter;
@@ -172,6 +172,8 @@ function App() {
       d3.select(this).select('.component-img').classed('active', true);
     }
     function showStamp(event, d) {
+
+      //Transition on removal of class
       d3.selectAll('.component-img').classed('active', false);
     }
 
