@@ -18,7 +18,7 @@ import waterAndSanitationStamp from './assets/stamps/water.png';
 let definitionsCSV = require('./assets/definitions-2022.csv');
 
 let parsedDef = d3.csv(definitionsCSV, function (data) {
-  if(data['Dimension'].length > 0) return data;
+  if (data['Dimension'].length > 0) return data;
 });
 
 let regEx = (d) => {
@@ -95,16 +95,16 @@ function App() {
   useLayoutEffect(() => {
     parsedDef.then(data => {
       Draw(data);
-    },[]);
+    }, []);
 
 
     function Draw(data) {
       let groupedData = d3.group(data, d => d["Dimension"], d => d["Component"], d => d['Indicator name']);
-      console.log(data);
 
-      let dimensions = d3.select(svgRef.current);
+      let ref = d3.select(svgRef.current);
+      console.log(ref);
 
-      dimensions
+      let dimensions = ref
         .selectAll('.dimension')
         .data(groupedData, d => d[0])
         .join(
@@ -120,53 +120,52 @@ function App() {
               });
 
             //Dimensions Title Bar
-            let divTitle = div.append('h3').attr("id", d => {
+            div.append('h3').attr("id", d => {
               let id = regEx(d[0]);
+              console.log(id);
               return `${id}_title`;
-            }).attr('class', 'dimension-title');
-
-            divTitle.text(d => d[0]).attr("class", "dimension-text");
-
-            let componentGroup = div
-              .append('div').attr('class', 'component-box')
-              .selectAll('.component')
-              .data(d => d[1])
-              .join(
-                enter => enter.append('div').attr("class", "component").attr("id", d => regEx(d[0])).on('mouseenter', hideStamp)
-                  .on('mouseleave', showStamp),
-                exit => exit.remove()
-              );
-
-            //text
-            componentGroup
-              .append('p')
-              .text(d => definitionSwitch(d));
-
-            //Link to indicators  
-            componentGroup
-              .append("ul")
-              .selectAll('li')
-              .data(d => d[1])
-              .join('li')
-              .text(d => d[0]).append("title")
-              .text(d => {
-                return `${d[1][0]['Source']}`
-              });
-
-            //stamp images
-            componentGroup
-              .append("img").attr("src", d => stampSwitch(d))
-              .attr('class', 'component-img').attr('pointer-events', 'none');
-
-            //component title
-            componentGroup
-              .append('h5').text(d => d[0]).attr("class", "component-title")
-              .style("background-color", d => textColorSwitch(d));
+            }).attr('class', 'dimension-title')
+            .text(d => d[0]);
 
             return enter;
 
           });
 
+      let componentGroup = dimensions
+        .append('div').attr('class', 'component-box')
+        .selectAll('.component')
+        .data(d => d[1])
+        .join(
+          enter => enter.append('div').attr("class", "component").attr("id", d => regEx(d[0])).on('mouseenter', hideStamp)
+            .on('mouseleave', showStamp),
+          exit => exit.remove()
+        );
+
+      //text
+      componentGroup
+        .append('p')
+        .text(d => definitionSwitch(d));
+
+      //Link to indicators  
+      componentGroup
+        .append("ul")
+        .selectAll('li')
+        .data(d => d[1])
+        .join('li')
+        .text(d => d[0]).append("title")
+        .text(d => {
+          return `${d[1][0]['Source']}`
+        });
+
+      //stamp images
+      componentGroup
+        .append("img").attr("src", d => stampSwitch(d))
+        .attr('class', 'component-img').attr('pointer-events', 'none');
+
+      //component title
+      componentGroup
+        .append('h5').text(d => d[0]).attr("class", "component-title")
+        .style("background-color", d => textColorSwitch(d));
       function hideStamp(event, d) {
         d3.select(this).select('.component-img').classed('active', true);
       }

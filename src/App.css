@@ -39,17 +39,19 @@
 }
 
 .definitionsApp {
+  /*
   width: calc(100vw - 20px);
   height: calc(100vh - 20px);
   margin: 10px;
   border-radius: 10px;
+  */
   background: rgba(255, 255, 255, 0.5);
   text-align: left;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   contain: content;
-  overflow: hidden;
+  overflow-y: scroll;
   font-family: 'Noteworthy', Fallback, sans-serif;
 }
 
@@ -64,7 +66,7 @@
   border-color: rgb(0, 0, 0);
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: minMax(30vh, 60vh);
   width: 100%;
   overflow: hidden;
 }
@@ -97,8 +99,7 @@
   grid-area: dim2;
 }
 
-.dimension-text {
-  height: 100%;
+.dimension-title {
   width: 2em;
   writing-mode: vertical-lr;
   text-orientation: sideways;
@@ -134,8 +135,8 @@
 .component-box {
   display: grid;
   grid-template-columns: repeat(4, minmax(200px, 1fr));
-  height: 100%;
   width: 100%;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   box-sizing: border-box;
   contain: content;
@@ -145,6 +146,7 @@
 .component:before {
   content: '';
   display: block;
+  height: auto;
   width: 100%;
   padding-bottom: 100%;
   grid-area: 1 / 1 / 2 / 2;
@@ -152,7 +154,7 @@
 
 .component {
   position: relative;
-  display: flex;
+  display: grid;
   height: auto;
   width: 100%;
   box-sizing: border-box;
@@ -162,8 +164,14 @@
 
 .component-img {
   position: absolute;
-  display: block;
+  grid-area: 1 / 1 / 2 / 2;
   overflow-x: hidden;
+  max-width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
   height: 100%;
   width: 100%;
   animation-name: slideIn;
@@ -182,6 +190,7 @@
 .component h5 {
   background-color: white;
   position: absolute;
+  grid-area: 1 / 1 / 2 / 2;
   top: 2.5%;
   left: 11%;
   width: 40%;
@@ -191,22 +200,32 @@
   border-width: 1px;
 }
 
+/* May need a grid container for the Component text elements */
 .component ul {
+  grid-area: 1 / 1 / 2 / 2;
+  position: absolute;
   height: 80%;
+  right: 5%;
+  top: 20%;
+  width: 50%;
 }
+
 .component li {
-  top: 10%;
-  width: 75%;
+ /* float:right;
+  clear:right;
+  width: 45%; */
   font-size: smaller;
   font-family: Helvetica;
 }
 
 .component p {
+  grid-area: 1 / 1 / 2 / 2;
   position: absolute;
-  left: 15%;
-  top: 30%;
-  width: 35%;
-  text-align: center;
+  left: 10%;
+  top: 40%;
+  width: 30%;
+  text-align: start;
+  text-indent: 1em;
   font-size: small;
   font-style: italic;
   font-family: Helvetica;
