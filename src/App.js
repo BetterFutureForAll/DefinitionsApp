@@ -15,10 +15,10 @@ import personalSafetyStamp from './assets/stamps/safety.png';
 import shelterStamp from './assets/stamps/shelter.png';
 import waterAndSanitationStamp from './assets/stamps/water.png';
 
-let definitionsCSV = require('./assets/definitions-2021.csv');
+let definitionsCSV = require('./assets/definitions-2022.csv');
 
 let parsedDef = d3.csv(definitionsCSV, function (data) {
-  return data['Dimension'].length > 0 ? data : null;
+  if (data['Dimension'].length > 0) return data;
 });
 
 let regEx = (d) => {
@@ -45,6 +45,7 @@ let textColorSwitch = (d) => {
     default: return '';
   }
 };
+
 let definitionSwitch = (d) => {
   switch (regEx(d[0])) {
     case "Nutrition_and_Basic_Medical_Care": return 'Do people have enough food to eat and are they receiving basic medical care? ';
@@ -89,99 +90,97 @@ let stampSwitch = (d) => {
 
 function App() {
 
-  let ref = useRef();
+  let svgRef = useRef();
 
   useLayoutEffect(() => {
     parsedDef.then(data => {
       Draw(data);
-    })
-  }, [])
+    }, []);
 
-  function Draw(data) {
-    let groupedData = d3.group(data, d => d["Dimension"], d => d["Component"], d => d['Indicator name']);
 
-    let dimensions = d3.select(ref.current);
+    function Draw(data) {
+      let groupedData = d3.group(data, d => d["Dimension"], d => d["Component"], d => d['Indicator name']);
 
-    dimensions.selectAll('.dimension')
-      .data(groupedData, d => d[0])
-      .join(
-        enter => {
-          let div = enter
-            .append("div")
-            .attr("class", (d, i) => {
-              return `dim-${i} dimension`;
-            })
-            .attr("id", d => {
+      let ref = d3.select(svgRef.current);
+      console.log(ref);
+
+      let dimensions = ref
+        .selectAll('.dimension')
+        .data(groupedData, d => d[0])
+        .join(
+          enter => {
+            let div = enter
+              .append("div")
+              .attr("class", (d, i) => {
+                return `dim-${i} dimension`;
+              })
+              .attr("id", d => {
+                let id = regEx(d[0]);
+                return id;
+              });
+
+            //Dimensions Title Bar
+            div.append('h3').attr("id", d => {
               let id = regEx(d[0]);
-              return id;
-            });
+              console.log(id);
+              return `${id}_title`;
+            }).attr('class', 'dimension-title')
+            .text(d => d[0]);
 
-          //Dimensions Title Bar
-          let divTitle = div.append('h3').attr("id", d => {
-            if (d[0].length === 0) {
-              return "remove";
-            }
-            //class and ID to isolate footer
-            let id = regEx(d[0]);
-            return `${id}_title`;
-          }).attr('class', 'dimension-title');
+            return enter;
 
-          divTitle.text(d => d[0]).attr("class", "dimension-text");
+          });
 
-          let componentGroup = div
-            .append('div').attr('class', 'component-box')
-            .selectAll('.component')
-            .data(d => d[1])
-            .join(
-              enter => enter.append('div').attr("class", "component").attr("id", d => regEx(d[0])).on('mouseenter', hideStamp)
-              .on('mouseleave', showStamp),
-              exit => exit.remove()
-            );
+      let componentGroup = dimensions
+        .append('div').attr('class', 'component-box')
+        .selectAll('.component')
+        .data(d => d[1])
+        .join(
+          enter => enter.append('div').attr("class", "component").attr("id", d => regEx(d[0])).on('mouseenter', hideStamp)
+            .on('mouseleave', showStamp),
+          exit => exit.remove()
+        );
 
-          //text
-          componentGroup
-            .append('p')
-            .text(d => definitionSwitch(d));
+      //text
+      componentGroup
+        .append('p')
+        .text(d => definitionSwitch(d));
 
-          //Link to indicators  
-          componentGroup
-            .append("ul")
-            .selectAll('li')
-            .data(d => d[1])
-            .join('li')
-            .text(d => d[0]).append("title")
-            .text(d => {
-              return `${d[1][0]['Source']}`
-            });
-
-          //stamp images
-          componentGroup
-            .append("img").attr("src", d => stampSwitch(d))
-            .attr('class', 'component-img').attr('pointer-events', 'none');
-
-          //component title
-          componentGroup
-            .append('h5').text(d => d[0]).attr("class", "component-title")
-            .style("background-color", d => textColorSwitch(d));
-            
-          return enter;
-
+      //Link to indicators  
+      componentGroup
+        .append("ul")
+        .selectAll('li')
+        .data(d => d[1])
+        .join('li')
+        .text(d => d[0]).append("title")
+        .text(d => {
+          return `${d[1][0]['Source']}`
         });
 
-    function hideStamp(event, d) {
-      d3.select(this).select('.component-img').classed('active', true);
-    }
-    function showStamp(event, d) {
+      //stamp images
+      componentGroup
+        .append("img").attr("src", d => stampSwitch(d))
+        .attr('class', 'component-img').attr('pointer-events', 'none');
 
-      //Transition on removal of class
-      d3.selectAll('.component-img').classed('active', false);
-    }
+      //component title
+      componentGroup
+        .append('h5').text(d => d[0]).attr("class", "component-title")
+        .style("background-color", d => textColorSwitch(d));
+      function hideStamp(event, d) {
+        d3.select(this).select('.component-img').classed('active', true);
+      }
+      function showStamp(event, d) {
 
-  };
+        //Transition on removal of class
+        d3.selectAll('.component-img').classed('active', false);
+      }
 
+    };
+
+  }, []);
 
   return (
-    <div className="definitionsApp" ref={ref} >
+    <div className="definitionsApp" ref={svgRef} >
     </div>
   );
 }

@@ -39,18 +39,19 @@
 }
 
 .definitionsApp {
-  width: calc(100vw - 10px);
-  height: calc(100vh - 10px);
-  margin: 5px;
-  padding: 2px;
+  /*
+  width: calc(100vw - 20px);
+  height: calc(100vh - 20px);
+  margin: 10px;
   border-radius: 10px;
+  */
   background: rgba(255, 255, 255, 0.5);
   text-align: left;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   contain: content;
-  overflow: hidden;
+  overflow-y: scroll;
   font-family: 'Noteworthy', Fallback, sans-serif;
 }
 
@@ -59,20 +60,18 @@
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  padding: 2.5px;
-  overflow: hidden;
-}
-
-.dim-0 {
-  box-sizing: border-box;
   border-radius: 10px;
   border-style: solid;
   border-width: 1px;
   border-color: rgb(0, 0, 0);
+  align-items: center;
+  justify-content: center;
+  height: minMax(30vh, 60vh);
+  width: 100%;
+  overflow: hidden;
+}
+
+.dim-0 {
   background-image: linear-gradient(rgba(255, 255, 255, 0.8),
       rgba(255, 255, 255, 0.8)),
     url('./assets/blue.jpg');
@@ -82,11 +81,6 @@
 }
 
 .dim-1 {
-  box-sizing: border-box;
-  border-radius: 10px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgb(0, 0, 0);
   background-image: linear-gradient(rgba(255, 255, 255, 0.85),
       rgba(255, 255, 255, 0.85)),
     url('./assets/green.jpg');
@@ -97,11 +91,6 @@
 }
 
 .dim-2 {
-  box-sizing: border-box;
-  border-radius: 10px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgb(0, 0, 0);
   background-image: linear-gradient(rgba(255, 255, 255, 0.85),
       rgba(255, 255, 255, 0.85)),
     url('./assets/red.jpg');
@@ -110,19 +99,14 @@
   grid-area: dim2;
 }
 
-.dimension-img {
-  height: 15em;
-  width: 15em;
-}
-
-.dimension-text {
-  height: 100%;
+.dimension-title {
+  width: 2em;
   writing-mode: vertical-lr;
   text-orientation: sideways;
   transform: rotate(-180deg);
   text-align: center;
 }
-
+/*
 @media only screen and (max-width: 992px) {
   /*
   .definitionsApp {
@@ -146,42 +130,52 @@
     flex-direction: row;
     contain: content;
     font-family: 'Noteworthy', Fallback, sans-serif;
-    */
 }
-
+*/
 .component-box {
-  display: flex;
-  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  width: 100%;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   box-sizing: border-box;
   contain: content;
+  place-items: center;
 }
 
 .component:before {
   content: '';
   display: block;
-  padding-top: 100%;
+  height: auto;
+  width: 100%;
+  padding-bottom: 100%;
+  grid-area: 1 / 1 / 2 / 2;
 }
 
 .component {
   position: relative;
-  display: flex;
+  display: grid;
   height: auto;
+  width: 100%;
   box-sizing: border-box;
-  aspect-ratio: 1/1;
-  flex: 1 1 auto;
   contain: content;
+  aspect-ratio: 1/1;
 }
 
 .component-img {
   position: absolute;
-  display: block;
+  grid-area: 1 / 1 / 2 / 2;
   overflow-x: hidden;
+  max-width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
   height: 100%;
   width: 100%;
   animation-name: slideIn;
-  animation-timing-function: ease-in-out;
-  animation-duration: 2000ms;
+  animation-duration: 500ms;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
@@ -189,46 +183,50 @@
 .component-img.active {
   animation-name: slideOut;
   animation-timing-function: ease-in-out;
-  animation-duration: 1000ms;
+  animation-duration: 500ms;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
-
 .component h5 {
   background-color: white;
   position: absolute;
-  top: 1%;
-  left: 10%;
-  width: 50%;
+  grid-area: 1 / 1 / 2 / 2;
+  top: 2.5%;
+  left: 11%;
+  width: 40%;
   text-align: center;
   padding: 0px 2px 0px 2px;
   border-style: solid;
   border-width: 1px;
 }
 
+/* May need a grid container for the Component text elements */
 .component ul {
+  grid-area: 1 / 1 / 2 / 2;
   position: absolute;
-  top: 35%;
-  height: 45%;
-  width: 95%;
-  box-sizing: border-box;
+  height: 80%;
+  right: 5%;
+  top: 20%;
+  width: 50%;
 }
 
 .component li {
-  width: 100%;
+ /* float:right;
+  clear:right;
+  width: 45%; */
   font-size: smaller;
   font-family: Helvetica;
 }
 
 .component p {
+  grid-area: 1 / 1 / 2 / 2;
   position: absolute;
-  left: 50%;
-  top: 26%;
-  transform: translate(-50%, -50%);
-  width: 85%;
-  text-align: center;
+  left: 10%;
+  top: 40%;
+  width: 30%;
+  text-align: start;
+  text-indent: 1em;
   font-size: small;
   font-style: italic;
   font-family: Helvetica;
-
 }
