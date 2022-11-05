@@ -14,16 +14,7 @@ import personalRightsStamp from './assets/stamps/rights.png';
 import personalSafetyStamp from './assets/stamps/safety.png';
 import shelterStamp from './assets/stamps/shelter.png';
 import waterAndSanitationStamp from './assets/stamps/water.png';
-
-let definitionsCSV = require('./assets/definitions-2022.csv');
-
-let parsedDef = d3.csv(definitionsCSV, function (data) {
-  if (data['Dimension'].length > 0) return data;
-});
-
-let regEx = (d) => {
-  return d.replace(/ /g, "_");
-}
+import { parsedDef, regEx } from './hooks'
 
 let textColorSwitch = (d) => {
   switch (regEx(d[0])) {
@@ -93,45 +84,38 @@ function App() {
   let svgRef = useRef();
 
   useLayoutEffect(() => {
-    parsedDef.then(data => {
-      Draw(data);
-    }, []);
-
 
     function Draw(data) {
       let groupedData = d3.group(data, d => d["Dimension"], d => d["Component"], d => d['Indicator name']);
-
       let ref = d3.select(svgRef.current);
-      console.log(ref);
+      ref.selectAll('.div-wrapper').remove();
+      let dimWrapper = ref.append('div').attr('class', 'div-wrapper');
 
-      let dimensions = ref
+      dimWrapper
         .selectAll('.dimension')
         .data(groupedData, d => d[0])
         .join(
-          enter => {
-            let div = enter
-              .append("div")
-              .attr("class", (d, i) => {
-                return `dim-${i} dimension`;
-              })
-              .attr("id", d => {
-                let id = regEx(d[0]);
-                return id;
-              });
-
-            //Dimensions Title Bar
-            div.append('h3').attr("id", d => {
+          enter => enter
+            .append("div")
+            .attr("class", (d, i) => {
+              return `dim-${i} dimension`;
+            })
+            .attr("id", d => {
               let id = regEx(d[0]);
-              console.log(id);
-              return `${id}_title`;
-            }).attr('class', 'dimension-title')
-            .text(d => d[0]);
+              return id;
+            }),
+          update => update,
+          exit => exit.remove());
 
-            return enter;
+      dimWrapper.selectAll(".dimension")
+        .append('h3').attr("id", d => {
+          let id = regEx(d[0]);
+          return `${id}_title`;
+        }).attr('class', 'dimension-title')
+        .text(d => d[0]);
 
-          });
 
-      let componentGroup = dimensions
+      let componentGroup = dimWrapper.selectAll(".dimension")
         .append('div').attr('class', 'component-box')
         .selectAll('.component')
         .data(d => d[1])
@@ -152,9 +136,19 @@ function App() {
         .selectAll('li')
         .data(d => d[1])
         .join('li')
-        .text(d => d[0]).append("title")
-        .text(d => {
-          return `${d[1][0]['Source']}`
+        .text(d => d[0])
+        .attr('title', d => {
+          return d[1][0]['Definition'];
+        })
+        .append('a')
+        .attr('class', 'citation')
+        .attr("href", d => {
+          return d[1][0]["Link"];
+        }).text('ⓘ')
+        .attr("target", "_blank")
+        .attr("rel", "noopener noreferrer")
+        .attr('title', d => {
+          return d[1][0]['Source'];
         });
 
       //stamp images
@@ -166,16 +160,23 @@ function App() {
       componentGroup
         .append('h5').text(d => d[0]).attr("class", "component-title")
         .style("background-color", d => textColorSwitch(d));
+
       function hideStamp(event, d) {
         d3.select(this).select('.component-img').classed('active', true);
+        d3.select(this).select('.component-title').classed('active', true);
       }
       function showStamp(event, d) {
 
         //Transition on removal of class
         d3.selectAll('.component-img').classed('active', false);
+        d3.selectAll('.component-title').classed('active', false);
       }
 
     };
+
+    parsedDef.then(data => {
+      Draw(data);
+    });
 
   }, []);
 
