@@ -106,7 +106,7 @@ function App() {
             }),
           update => update,
           exit => exit.remove());
-
+      //Dimension Titles
       dimWrapper.selectAll(".dimension")
         .append('h3').attr("id", d => {
           let id = regEx(d[0]);
@@ -114,7 +114,7 @@ function App() {
         }).attr('class', 'dimension-title')
         .text(d => d[0]);
 
-
+      //Component Box
       let componentGroup = dimWrapper.selectAll(".dimension")
         .append('div').attr('class', 'component-box')
         .selectAll('.component')
@@ -131,7 +131,7 @@ function App() {
         .text(d => definitionSwitch(d));
 
       //Link to indicators  
-      componentGroup
+     let indicators = componentGroup
         .append("ul")
         .selectAll('li')
         .data(d => d[1])
@@ -140,15 +140,28 @@ function App() {
         .attr('title', d => {
           return d[1][0]['Definition'];
         })
-        .append('a')
+
+       indicators
+       .selectAll('.citation')
+       .data(d=>{
+        let links = d[1][0]['Link'].split(/\r?\n/);
+        let sources = d[1][0]['Source'].split(/;/);
+        let result = [];
+        links.forEach(function(d, i) {  
+          result.push({ citation: [ links[i], sources[i] ]})
+        });
+        return result;
+       }) 
+        .join('a')
         .attr('class', 'citation')
         .attr("href", d => {
-          return d[1][0]["Link"];
+          return d.citation[0];
         }).text('ⓘ')
         .attr("target", "_blank")
         .attr("rel", "noopener noreferrer")
         .attr('title', d => {
-          return d[1][0]['Source'];
+          if(!d.citation[1]) return d.citation[0];
+          return  d.citation[1];
         });
 
       //stamp images
