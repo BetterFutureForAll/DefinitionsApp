@@ -179,6 +179,7 @@
   width: 100%;
   box-sizing: border-box;
   contain: content;
+  background-color: white;
   aspect-ratio: 1/1;
 }
 
