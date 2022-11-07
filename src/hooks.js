@@ -1,6 +1,6 @@
 import * as d3 from 'd3';
 
-let definitionsCSV = require('./assets/definitions-2022.csv');
+let definitionsCSV = require('./assets/def2022.csv');
 
 export const parsedDef = d3.csv(definitionsCSV,(data)=> {
 
