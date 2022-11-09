@@ -26,6 +26,7 @@
     margin-top: 92%;
   }
 }
+
 @keyframes titleSlideOut {
 
   0% {
@@ -71,8 +72,8 @@
   flex-direction: column;
   box-sizing: border-box;
   contain: content;
-  overflow-y: scroll;
   font-family: 'Noteworthy', Fallback, sans-serif;
+  margin: 2.5px;
 }
 
 .dimension {
@@ -85,6 +86,7 @@
   border-color: rgb(0, 0, 0);
   align-items: center;
   justify-content: center;
+  height: 33vh;
   width: 100%;
   overflow: hidden;
 }
@@ -118,50 +120,32 @@
 }
 
 .dimension-title {
-  width: 2em;
   writing-mode: vertical-lr;
   text-orientation: sideways;
   transform: rotate(-180deg);
   text-align: center;
+  font-size: medium;
+  margin: 0px;
 }
 
-/*
-@media only screen and (max-width: 992px) {
-  /*
-  .definitionsApp {
-    width: calc(100vw - 10px);
-    height: calc(100vh - 10px);
-    margin: 5px;
-    padding: 2px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.5);
-    text-align: start;
-    overflow-y: scroll;
-    grid-template-columns: 100vw;
-    grid-template-rows: repeat(3, 100vh);
-    grid-column-gap: 1px;
-    grid-row-gap: 0px;
-    grid-template-areas:
-      "dim0"
-      "dim1"
-      "dim2";
-    box-sizing: border-box;
-    flex-direction: row;
-    contain: content;
-    font-family: 'Noteworthy', Fallback, sans-serif;
-}
-*/
+
 .component-box {
+  --content-width: 100vw;
+  --columns: 4;
+  --row-size: calc((var(--content-width) - ((var(--columns) - 1))) / var(--columns));
+
   display: grid;
-  grid-template-columns: repeat(4, minmax(150px, 1fr));
   width: 100%;
-  height: 100%;
+  max-width: var(--content-width);
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-auto-rows: var(--row-size);
   flex-wrap: wrap;
   justify-content: space-evenly;
   box-sizing: border-box;
   contain: content;
   place-items: center;
 }
+
 
 .component:before {
   content: '';
@@ -222,8 +206,9 @@
   position: absolute;
   grid-area: 1 / 1 / 2 / 2;
   top: 2.5%;
-  left: 11%;
+  margin-left: 11%;
   width: 40%;
+  font-size: 12px;
   text-align: center;
   padding: 0px 2px 0px 2px;
   border-style: solid;
@@ -238,25 +223,58 @@
   grid-area: 1 / 1 / 2 / 2;
   position: absolute;
   height: 80%;
-  left: 5%;
   top: 25%;
-  width: 75%;
+  width: 80%;
 }
 
 .component li {
   font-size: smaller;
-  font-family: Helvetica;
+  font-family: Arial, sans-serif;
 }
 
 .component p {
   grid-area: 1 / 1 / 2 / 2;
   position: absolute;
-  left: 10%;
-  top: 10%;
-  width: 75%;
+  top: 5%;
+  width: 80%;
+  left: 1em;
   text-align: center;
-  text-indent: 1em;
   font-size: small;
   font-style: italic;
-  font-family: Helvetica;
+  font-family: Arial, sans-serif;
+}
+
+
+@media (max-width: 768px) {
+
+  .definitionsApp {
+    overflow-y: scroll;
+  }
+
+  .dimension {
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .dimension-title {
+    writing-mode: horizontal-tb;
+    text-orientation: upright;
+    text-align: center;
+    transform: none;
+    height: fit-content;
+  }
+
+  .component-box {
+    --columns: 2;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .component-box {
+    --columns: 1;
+  }
+
 }

@@ -131,7 +131,7 @@ function App() {
         .text(d => definitionSwitch(d));
 
       //Link to indicators  
-     let indicators = componentGroup
+      let indicators = componentGroup
         .append("ul")
         .selectAll('li')
         .data(d => d[1])
@@ -141,17 +141,18 @@ function App() {
           return d[1][0]['Definition'];
         })
 
-       indicators
-       .selectAll('.citation')
-       .data(d=>{
-        let links = d[1][0]['Link'].split(/\r?\n/);
-        let sources = d[1][0]['Source'].split(/;/);
-        let result = [];
-        links.forEach(function(d, i) {  
-          result.push({ citation: [ links[i], sources[i] ]})
-        });
-        return result;
-       }) 
+      indicators
+        .selectAll('.citation')
+        .data(d => {
+          //filters indicators with multiple citations
+          let links = d[1][0]['Link'].split(/\r?\n/);
+          let sources = d[1][0]['Source'].split(/;/);
+          let result = [];
+          links.forEach(function (d, i) {
+            result.push({ citation: [links[i], sources[i]] })
+          });
+          return result;
+        })
         .join('a')
         .attr('class', 'citation')
         .attr("href", d => {
@@ -160,8 +161,8 @@ function App() {
         .attr("target", "_blank")
         .attr("rel", "noopener noreferrer")
         .attr('title', d => {
-          if(!d.citation[1]) return d.citation[0];
-          return  d.citation[1];
+          if (!d.citation[1]) return d.citation[0];
+          return d.citation[1];
         });
 
       //stamp images
