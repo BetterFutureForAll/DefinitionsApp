@@ -38,7 +38,7 @@
   }
 
   100% {
-    margin-top: -20%;
+    margin-top: -25%;
 
   }
 }
@@ -136,7 +136,7 @@
 
   display: grid;
   width: 100%;
-  max-width: var(--content-width);
+  max-width: calc(33vh *  4);
   grid-template-columns: repeat(var(--columns), 1fr);
   grid-auto-rows: var(--row-size);
   flex-wrap: wrap;
@@ -152,6 +152,7 @@
   display: block;
   height: auto;
   width: 100%;
+  max-height: var(--row-size);
   padding-bottom: 100%;
   grid-area: 1 / 1 / 2 / 2;
 }
@@ -206,9 +207,9 @@
   position: absolute;
   grid-area: 1 / 1 / 2 / 2;
   top: 2.5%;
-  margin-left: 11%;
+  left: 11%;
   width: 40%;
-  font-size: 12px;
+  font-size: 1vw;
   text-align: center;
   padding: 0px 2px 0px 2px;
   border-style: solid;
@@ -223,28 +224,28 @@
   grid-area: 1 / 1 / 2 / 2;
   position: absolute;
   height: 80%;
-  top: 25%;
-  width: 80%;
+  top: 20%;
+  width: 85%;
+  padding-inline-start: 32px;
 }
 
 .component li {
-  font-size: smaller;
+  font-size: 1vw;
   font-family: Arial, sans-serif;
 }
 
 .component p {
   grid-area: 1 / 1 / 2 / 2;
   position: absolute;
-  top: 5%;
-  width: 80%;
+  top: 1%;
+  width: 85%;
   left: 1em;
   text-align: center;
   font-size: small;
-  font-style: italic;
   font-family: Arial, sans-serif;
 }
 
-
+/* Medium (Tablets, iPad, Horizontal Mobile */
 @media (max-width: 768px) {
 
   .definitionsApp {
@@ -263,6 +264,24 @@
     transform: none;
     height: fit-content;
   }
+  .component {
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+  }
+
+  .component-title {
+    font-size: medium;
+  }
+
+  .component p {
+    font-size: medium;
+  }
+
+  .component li {
+    font-size: medium;
+  }
 
   .component-box {
     --columns: 2;
@@ -270,7 +289,7 @@
 
 }
 
-
+/* Small / Mobile */
 @media (max-width: 480px) {
 
   .component-box {
