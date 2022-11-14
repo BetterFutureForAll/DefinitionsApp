@@ -247,7 +247,7 @@
 }
 
 /* Medium (Tablets, iPad, Horizontal Mobile */
-@media (max-width: 768px) {
+@media (max-width: 820px) {
 
   .definitionsApp {
     overflow-y: scroll;
@@ -271,19 +271,9 @@
     border-width: 1px;
     border-color: rgb(0, 0, 0);
   }
-
-  .component-title {
-    font-size: medium;
+  .component ul {
+    padding-inline-start: 5vmax;
   }
-
-  .component p {
-    font-size: medium;
-  }
-
-  .component li {
-    font-size: medium;
-  }
-
   .component-box {
     --columns: 2;
   }
@@ -295,9 +285,6 @@
 
   .component-box {
     --columns: 1;
-  }
-  .component ul {
-    padding-inline-start: 5vmax;
   }
 
 }
