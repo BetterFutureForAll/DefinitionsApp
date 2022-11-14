@@ -38,7 +38,7 @@
   }
 
   100% {
-    margin-top: -25%;
+    margin-top: -50%;
 
   }
 }
@@ -209,7 +209,7 @@
   top: 2.5%;
   left: 11%;
   width: 40%;
-  font-size: 1vw;
+  font-size: 1.5vmin;
   text-align: center;
   padding: 0px 2px 0px 2px;
   border-style: solid;
@@ -223,25 +223,26 @@
 .component ul {
   grid-area: 1 / 1 / 2 / 2;
   position: absolute;
-  height: 80%;
-  top: 20%;
-  width: 85%;
-  padding-inline-start: 32px;
+  top: 25%;
+  width: 80%;
+  padding-inline-start: 4vmin;
 }
 
 .component li {
-  font-size: 1vw;
+  font-size: 1.5vmin;
   font-family: Arial, sans-serif;
 }
 
 .component p {
   grid-area: 1 / 1 / 2 / 2;
   position: absolute;
-  top: 1%;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
   width: 85%;
-  left: 1em;
   text-align: center;
-  font-size: small;
+  font-size: 1.5vmin;
   font-family: Arial, sans-serif;
 }
 
