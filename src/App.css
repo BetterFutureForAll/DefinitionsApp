@@ -296,5 +296,8 @@
   .component-box {
     --columns: 1;
   }
+  .component ul {
+    padding-inline-start: 5vmax;
+  }
 
 }
