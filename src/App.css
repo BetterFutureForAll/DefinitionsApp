@@ -293,5 +293,7 @@
   .component {
     --font-size: 4vmin;
   }
+  .component ul {
+    padding-inline-start: 6vmax;  }
 
 }
