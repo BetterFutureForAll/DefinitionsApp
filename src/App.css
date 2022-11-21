@@ -92,8 +92,10 @@
 }
 
 .dim-0 {
-  background-image: linear-gradient(to left, rgba(0, 0, 255, 0.8),
-      rgba(255, 255, 255, 0.8)),
+  background-image: linear-gradient(to left,
+      rgba(255, 255, 255, 0.8),
+      rgba(0, 0, 255, 0.8),
+      rgba(255, 255, 255, 0.7)),
     url('./assets/blue.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -101,8 +103,10 @@
 }
 
 .dim-1 {
-  background-image: linear-gradient(to left, rgba(0, 255, 0, 0.8),
-      rgba(255, 255, 255, 0.85)),
+  background-image: linear-gradient(to left,
+      rgba(255, 255, 255, 0.8),
+      rgba(0, 255, 0, 0.8),
+      rgba(255, 255, 255, 0.7)),
     url('./assets/green.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -111,7 +115,9 @@
 }
 
 .dim-2 {
-  background-image: linear-gradient(to left, rgba(255, 0, 0, 0.8),
+  background-image: linear-gradient(to left,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 0, 0, 0.8),
       rgba(255, 255, 255, 0.85)),
     url('./assets/red.jpg');
   background-size: cover;
@@ -268,20 +274,26 @@
   }
 
   .dim-0 {
-    background-image: linear-gradient(to top, rgba(0, 0, 255, 0.8),
-        rgba(255, 255, 255, 0.8)),
+    background-image: linear-gradient(to top,
+        rgba(255, 255, 255, 0.8),
+        rgba(0, 0, 255, 0.8),
+        rgba(255, 255, 255, 0.7)),
       url('./assets/blue.jpg');
   }
 
   .dim-1 {
-    background-image: linear-gradient(to top, rgba(0, 255, 0, 0.8),
-        rgba(255, 255, 255, 0.85)),
+    background-image: linear-gradient(to top,
+        rgba(255, 255, 255, 0.8),
+        rgba(0, 255, 0, 0.8),
+        rgba(255, 255, 255, 0.7)),
       url('./assets/green.jpg');
   }
 
   .dim-2 {
-    background-image: linear-gradient(to top, rgba(255, 0, 0, 0.8),
-        rgba(255, 255, 255, 0.85)),
+    background-image: linear-gradient(to top,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 0, 0, 0.8),
+        rgba(255, 255, 255, 0.7)),
       url('./assets/red.jpg');
   }
 
@@ -294,7 +306,7 @@
   }
 
   .component {
-    border-radius: 20px;
+    border-radius: 12px;
     --font-size: 2vmin;
   }
 
