@@ -78,9 +78,12 @@ let stampSwitch = (d) => {
 }
 
 export default function Draw(data, svgRef, regEx) {
+
   let groupedData = d3.group(data, d => d["Dimension"], d => d["Component"], d => d['Indicator name']);
   let ref = d3.select(svgRef.current);
+
   ref.selectAll('.div-wrapper').remove();
+  
   let dimWrapper = ref.append('div').attr('class', 'div-wrapper');
 
   dimWrapper
