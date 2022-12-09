@@ -83,7 +83,7 @@ export default function Draw(data, svgRef, regEx) {
   let ref = d3.select(svgRef.current);
 
   ref.selectAll('.div-wrapper').remove();
-  
+
   let dimWrapper = ref.append('div').attr('class', 'div-wrapper');
 
   dimWrapper
@@ -134,7 +134,17 @@ export default function Draw(data, svgRef, regEx) {
     .text(d => d[0])
     .attr('title', d => {
       return d[1][0]['Definition'];
-    })
+    }).attr("class", "list-item")
+
+  indicators
+    // .selectAll('.more-info').data(d => {
+    //   console.log(d[1]);
+    //   return d[1]})
+    //   .join('tspan').attr("class", 'more-info').text(d=>{
+    //   console.log(d);
+    //   return d["Definition"];
+    // })
+    .on('click', moreInfo)
 
   indicators
     .selectAll('.citation')
@@ -180,5 +190,25 @@ export default function Draw(data, svgRef, regEx) {
     d3.selectAll('.component-img').classed('active', false);
     d3.selectAll('.component-title').classed('active', false);
   }
+
+  function moreInfo(event, d) {
+    event.preventDefault();
+    console.log('moreInfo',event);
+    d3.selectAll('.more-info').remove();
+    d3.select(this).on('click', lessInfo)
+    d3.select(this).selectAll('.more-info')
+      .data(d => d[1])
+      .join('div')
+      .attr("class", 'more-info')
+      .text(d => { return (`${d["Definition"]}`); })
+      .on("click", lessInfo)
+  }
+
+  function lessInfo(event, d) {
+    console.log('lessInfo',event);
+    event.preventDefault();
+    d3.selectAll('.more-info').remove();
+    indicators.on('click', moreInfo)
+  };
 
 };
