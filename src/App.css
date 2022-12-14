@@ -247,6 +247,22 @@
 .component li {
   font-size: var(--font-size);
   font-family: Arial, sans-serif;
+
+  li:active {
+    font-weight: bold;
+  }
+}
+
+.component li .more-info {
+  border: #666 1px dotted;
+  display: inline block;
+  left: 60%;
+  width: 90%;
+  transform: translate(-50%, -25%);
+  background: #e3e3e3;
+  position: absolute;
+  text-decoration: none;
+  font-size: 1.3vmin;
 }
 
 .component p {
@@ -261,6 +277,8 @@
   font-family: 'Times New Roman', Times, serif;
   font-weight: 600;
 }
+
+
 
 /* Medium (Tablets, iPad, Horizontal Mobile */
 @media (max-width: 948px) {
@@ -325,14 +343,18 @@
     --columns: 2;
     --gutter: 5px;
   }
+  .component li .more-info {
+    font-size: 1.8vmin;
+  }
 
 }
 
 /* Small / Mobile */
 @media (max-width: 480px) {
   .dimension-title {
-    font-size: 6vm;
+    font-size: 5vmin;
   }
+
   .component-box {
     --columns: 1;
   }
@@ -343,6 +365,10 @@
 
   .component ul {
     padding-inline-start: 7vmax;
+  }
+  
+  .component li .more-info {
+    font-size: 3vmin;
   }
 
 }
