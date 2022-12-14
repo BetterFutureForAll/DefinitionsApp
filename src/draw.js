@@ -100,7 +100,8 @@ export default function Draw(data, svgRef, regEx) {
           return id;
         }),
       update => update,
-      exit => exit.remove());
+      exit => exit.remove()
+    );
   //Dimension Titles
   dimWrapper.selectAll(".dimension")
     .append('h3').attr("id", d => {
@@ -135,15 +136,6 @@ export default function Draw(data, svgRef, regEx) {
     .attr('title', d => {
       return d[1][0]['Definition'];
     }).attr("class", "list-item")
-
-  indicators
-    // .selectAll('.more-info').data(d => {
-    //   console.log(d[1]);
-    //   return d[1]})
-    //   .join('tspan').attr("class", 'more-info').text(d=>{
-    //   console.log(d);
-    //   return d["Definition"];
-    // })
     .on('click', moreInfo)
 
   indicators
@@ -193,22 +185,22 @@ export default function Draw(data, svgRef, regEx) {
 
   function moreInfo(event, d) {
     event.preventDefault();
-    console.log('moreInfo',event);
     d3.selectAll('.more-info').remove();
-    d3.select(this).on('click', lessInfo)
     d3.select(this).selectAll('.more-info')
       .data(d => d[1])
       .join('div')
       .attr("class", 'more-info')
-      .text(d => { return (`${d["Definition"]}`); })
-      .on("click", lessInfo)
+      .text(d => { return (`${d["Definition"]}`); });
+    d3.selectAll('.list-item')
+      .on("click", lessInfo);
   }
 
   function lessInfo(event, d) {
-    console.log('lessInfo',event);
     event.preventDefault();
     d3.selectAll('.more-info').remove();
-    indicators.on('click', moreInfo)
+
+    d3.selectAll('.list-item')
+    .on("click", moreInfo);
   };
 
 };

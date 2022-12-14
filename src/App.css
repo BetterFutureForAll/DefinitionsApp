@@ -256,7 +256,6 @@
 .component li .more-info {
   border: #666 1px dotted;
   display: inline block;
-  z-index: 10;
   left: 60%;
   width: 90%;
   transform: translate(-50%, -25%);
@@ -367,6 +366,7 @@
   .component ul {
     padding-inline-start: 7vmax;
   }
+  
   .component li .more-info {
     font-size: 3vmin;
   }
