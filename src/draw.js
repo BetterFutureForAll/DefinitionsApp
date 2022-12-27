@@ -136,7 +136,6 @@ export default function Draw(data, svgRef, regEx) {
     .attr('title', d => {
       return d[1][0]['Definition'];
     }).attr("class", "list-item")
-    .on('click', moreInfo)
 
   indicators
     .selectAll('.citation')
@@ -177,6 +176,9 @@ export default function Draw(data, svgRef, regEx) {
     d3.select(this).select('.component-title').classed('active', true);
   }
 
+  d3.selectAll('.list-item')
+    .on("click", moreInfo);
+
   function showStamp(event, d) {
     //Transition on removal of class
     d3.selectAll('.component-img').classed('active', false);
@@ -184,15 +186,70 @@ export default function Draw(data, svgRef, regEx) {
   }
 
   function moreInfo(event, d) {
+    console.log(d);
+    console.log(event);
+
+
+
+
+
     event.preventDefault();
     d3.selectAll('.more-info').remove();
     d3.select(this).selectAll('.more-info')
       .data(d => d[1])
       .join('div')
       .attr("class", 'more-info')
-      .text(d => { return (`${d["Definition"]}`); });
+      .text(d => { return (`${d["Definition"]}`); })
+      // .selectAll('.citation')
+      // .data(d => {
+      //   //filters indicators with multiple citations
+      //   let links = d['Link'].split(/\r?\n/);
+      //   let sources = d['Source'].split(/;/);
+      //   let result = [];
+      //   links.forEach(function (d, i) {
+      //     result.push({ citation: [links[i], sources[i]] })
+      //   });
+      //   console.log(d,result);
+      //   return result
+      // })
+      // .join('a')
+      // .attr('class', 'citation')
+      // .attr("href", d => {
+      //   console.log(d);
+      //   //filters indicators with multiple citations
+      //   let links = d['Link'].split(/\r?\n/);
+      //   let sources = d['Source'].split(/;/);
+      //   let result = [];
+      //   links.forEach(function (d, i) {
+      //     result.push({ citation: [links[i], sources[i]] })
+      //   });
+      //   console.log(d,result);
+
+      //   // return d.citation[0];
+      // }).text('ⓘ')
+      // .attr("target", "_blank")
+      // .attr("rel", "noopener noreferrer")
+      // .attr('title', d => {
+      //   if (!d.citation[1]) return d.citation[0];
+      //   return d.citation[1];
+      // });;
     d3.selectAll('.list-item')
       .on("click", lessInfo);
+
+    // d3.selectAll('.more-info')
+    //   .data(d => {
+    //     console.log(d);
+    //     //filters indicators with multiple citations
+    //     let links = d[1][0]['Link'].split(/\r?\n/);
+    //     let sources = d[1][0]['Source'].split(/;/);
+    //     let result = [];
+    //     links.forEach(function (d, i) {
+    //       result.push({ citation: [links[i], sources[i]] })
+    //     });
+
+    //     return result;
+    //   })
+
   }
 
   function lessInfo(event, d) {
@@ -200,7 +257,7 @@ export default function Draw(data, svgRef, regEx) {
     d3.selectAll('.more-info').remove();
 
     d3.selectAll('.list-item')
-    .on("click", moreInfo);
+      .on("click", moreInfo);
   };
 
 };
