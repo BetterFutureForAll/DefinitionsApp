@@ -136,7 +136,7 @@ export default function Draw(data, svgRef, regEx) {
     .attr('title', d => {
       return d[1][0]['Definition'];
     }).attr("class", "list-item")
-    .on('click', moreInfo)
+  // .on('click', moreInfo)
 
   indicators
     .selectAll('.citation')
@@ -162,6 +162,8 @@ export default function Draw(data, svgRef, regEx) {
       return d.citation[1];
     });
 
+  d3.selectAll('.list-item').on('click', moreInfo)
+
   //stamp images
   componentGroup
     .append("img").attr("src", d => stampSwitch(d))
@@ -185,14 +187,18 @@ export default function Draw(data, svgRef, regEx) {
 
   function moreInfo(event, d) {
     event.preventDefault();
-    d3.selectAll('.more-info').remove();
-    d3.select(this).selectAll('.more-info')
-      .data(d => d[1])
-      .join('div')
-      .attr("class", 'more-info')
-      .text(d => { return (`${d["Definition"]}`); });
-    d3.selectAll('.list-item')
-      .on("click", lessInfo);
+    console.log('citation clicked', d3.select(this).attr('class'))
+    if (d3.select(this).attr('class') === 'list-item') return;
+    else {
+      d3.selectAll('.more-info').remove();
+      d3.select(this).selectAll('.more-info')
+        .data(d => d[1])
+        .join('div')
+        .attr("class", 'more-info')
+        .text(d => { return (`${d["Definition"]}`); });
+      d3.selectAll('.list-item')
+        .on("click", lessInfo);
+    }
   }
 
   function lessInfo(event, d) {
@@ -200,7 +206,7 @@ export default function Draw(data, svgRef, regEx) {
     d3.selectAll('.more-info').remove();
 
     d3.selectAll('.list-item')
-    .on("click", moreInfo);
+      .on("click", moreInfo);
   };
 
 };

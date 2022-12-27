@@ -1,6 +1,7 @@
 import { parsedDef, regEx } from "../hooks";
 import rawData from '../assets/definitions.json';
 import { nestedData } from '../DimensionBox';
+import { useParsedData } from '../hooks';
 let data = rawData.definitionsArray;
 
 describe('test suite for hooks functions', ()=>  {
@@ -13,8 +14,9 @@ describe('test suite for hooks functions', ()=>  {
   });
   
   //skipped due to CSV path parsing error is JSDOM
-  test.skip('should parse a CSV and return an array of objects', async () => {
-    let result = await parsedDef;
+  test('should parse a CSV and return an array of objects', async () => {
+    let [data, setData] = useParsedData();
+    let result = await data;
     let objectMock = { "key": "value" };
     await expect(result).resolves.toBe(objectMock);
     await expect(result).rejects.toMatch('error');
