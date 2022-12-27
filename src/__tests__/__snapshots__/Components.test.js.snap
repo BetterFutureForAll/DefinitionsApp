@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests React Components Should return an Indicator with valid props 1`] = `
+<li
+  class="list-item"
+  title="Probability of dying between birth and exactly 5 years of age, expressed per 1,000 live births. "
+>
+  Child mortality rate 
+  <a
+    class="citation"
+    href="http://www.childmortality.org"
+    rel="noopener noreferrer"
+    target="_blank"
+    title="UN Inter-agency Group for Child Mortality Estimation"
+  >
+    ⓘ
+  </a>
+</li>
+`;

@@ -1,12 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Indicator = (props) => {
 
+const Indicator = ({ props }) => {
+console.log(props)
   // citations split fn to create multiple <a href> 
 
   return (
-    <li title={props} class='list-item'>
-      `${props.indicator_name}`
+    <li title={props.definition} class='list-item'>
+      {props.indicator_name}
       <a
         title={props.source}
         href={props.link}
@@ -19,6 +21,11 @@ const Indicator = (props) => {
     </li>
   )
 };
+
+Indicator.propTypes = {
+  indicator_number: PropTypes.string,
+
+}
 
 export default Indicator;
 
