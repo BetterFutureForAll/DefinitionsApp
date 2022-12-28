@@ -29,18 +29,16 @@ export const useDimensions = (data) => {
 
 }
 
-export const nestedData = ()=> {
-
-let uniqueDimensionStrings = new Set(definitionsJSON.definitionsArray.map(JSON.stringify));
-let uniqueDimensionsArray = Array.from(uniqueDimensionStrings);
-let uniqueDimensionsObjects = new Set(uniqueDimensionsArray.map(JSON.parse));
-let uniqueDimensions = new Set(definitionsJSON.definitionsArray.map(({ dimension })=> dimension? dimension : null));
-
-return uniqueDimensions;
-
-
-};
-
 export const regEx = (d) => {
   return d.replace(/ /g, "_");
 }
+
+export const groupBy = (objectArray, property) => {
+
+  return objectArray.reduce((acc, obj) => {
+    const key = obj[property];
+    const curGroup = acc[key] ?? [];
+
+    return { ...acc, [key]: [...curGroup, obj] };
+  }, {});
+};

@@ -91,7 +91,7 @@ const Component = ({ props }) => {
   })
 
   return (
-    <div className='component'>
+    <div className='component' id={regEx(props[0].component)}>
       <p>
         {definitionText}
       </p>

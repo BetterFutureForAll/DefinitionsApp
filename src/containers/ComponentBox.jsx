@@ -1,16 +1,24 @@
 import React from "react";
-import Indicator
+import { Component } from "../components/Component";
+import { groupBy } from "../hooks";
 
-from "../components/Indicator";
-const Component = (props) => {
-  //map indicators
+const Components = ({ data }) => {
+   //group by Component
+   let groupedComponentObject = groupBy(data, 'component');
+   
+   console.log(groupedComponentObject);
 
-  return (
-    <Indicator props={props}/>
-  )
+    let filtered = Object.keys(groupedComponentObject).map((d, i) => {
+        console.log(groupedComponentObject[d]);
+        return groupedComponentObject[d]
+        // return <Component props={d}/>
+    });
+
+return;
+
 };
 
-export default Component;
+export default Components;
 
 /*
 [

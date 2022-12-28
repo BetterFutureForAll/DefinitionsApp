@@ -3,6 +3,7 @@
 exports[`Tests React Components Creates a component with multiple indicators 1`] = `
 <div
   className="component"
+  id="Nutrition_and_Basic_Medical_Care"
 >
   <p>
     Do people have enough food to eat and are they receiving basic medical care? 

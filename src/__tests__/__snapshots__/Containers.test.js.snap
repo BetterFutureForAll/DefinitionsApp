@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Containers separate data into their unique Dimensions and Components creates props of unique components as an array 1`] = `null`;
