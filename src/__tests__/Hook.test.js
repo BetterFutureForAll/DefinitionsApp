@@ -12,14 +12,5 @@ describe('test suite for hooks functions', ()=>  {
     expect(result).toBe(expected);
   });
   
-  //skipped due to CSV path parsing error is JSDOM
-  test.skip('should parse a CSV and return an array of objects', async () => {
-    let [data, setData] = useParsedData();
-    let result = await data;
-    let objectMock = { "key": "value" };
-    await expect(result).resolves.toBe(objectMock);
-    await expect(result).rejects.toMatch('error');
-  
-  });
 
 });
