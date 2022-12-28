@@ -11,7 +11,6 @@ const Indicator = ({ props }) => {
     citations.push({ link: links[i], source: sources[i], key: [i] })
   });
 
-  console.log('citations:', citations);
   let citationGroup = citations.map((citation) => (
     <a
       key={citation.key}
@@ -36,11 +35,15 @@ const Indicator = ({ props }) => {
 
 Indicator.propTypes = {
   indicator_number: PropTypes.string,
-
+  dimension: PropTypes.string,
+  component: PropTypes.string,
+  indicator_name: PropTypes.string,
+  definition: PropTypes.string,
+  source: PropTypes.string,
+  link: PropTypes.string,
 }
 
 export default Indicator;
-
 
 /*
 {
