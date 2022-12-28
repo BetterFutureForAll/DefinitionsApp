@@ -1,5 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Tests React Components Should create multiple links from a single object 1`] = `
+<li
+  class="list-item"
+  title="The number of universities in a country weighted by the quality of universities, measured by university rankings on any of the three most widely used international assessments. Universities in the top 400 on any list are given double weight. Not ranked universities are given 5% weight of the top ranked universities.
+"
+>
+  Quality weighted universities 
+  <a
+    class="citation"
+    href="https://www.timeshighereducation.com/world-university-rankings/2022"
+    rel="noopener noreferrer"
+    target="_blank"
+    title="Times Higher Education World University Rankings, QS World University Rankings, and Academic Ranking of World Universities"
+  >
+    ⓘ
+  </a>
+  <a
+    class="citation"
+    href="https://www.topuniversities.com/university-rankings/world-university-rankings/2023"
+    rel="noopener noreferrer"
+    target="_blank"
+    title=" Varieties of Democracy (V-Dem), Dataset Version 12 "
+  >
+    ⓘ
+  </a>
+  <a
+    class="citation"
+    href="https://www.shanghairanking.com/rankings/arwu/2020"
+    rel="noopener noreferrer"
+    target="_blank"
+    title=" SPI calculations"
+  >
+    ⓘ
+  </a>
+  <a
+    class="citation"
+    href="https://v-dem.net/vdemds.html"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    ⓘ
+  </a>
+</li>
+`;
+
 exports[`Tests React Components Should return an Indicator with valid props 1`] = `
 <li
   class="list-item"

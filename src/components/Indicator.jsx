@@ -1,23 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 const Indicator = ({ props }) => {
-console.log(props)
+  console.log(props)
   // citations split fn to create multiple <a href> 
+  let links = props.link.split(/\r?\n/);
+  let sources = props.source.split(/;/);
+  let citations = [];
+  links.forEach(function (d, i) {
+    citations.push({ link: links[i], source: sources[i], key: [i] })
+  });
+
+  console.log('citations:', citations);
+  let citationGroup = citations.map((citation) => (
+    <a
+      key={citation.key}
+      title={citation.source}
+      href={citation.link}
+      class="citation"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      ⓘ
+    </a>
+  )
+  );
 
   return (
     <li title={props.definition} class='list-item'>
       {props.indicator_name}
-      <a
-        title={props.source}
-        href={props.link}
-        class="citation"
-        target="_blank"
-        rel="noopener noreferrer"
-        >
-        ⓘ
-      </a>
+      {citationGroup}
     </li>
   )
 };
