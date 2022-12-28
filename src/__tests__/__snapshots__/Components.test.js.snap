@@ -1,5 +1,118 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Tests React Components Creates a component with multiple indicators 1`] = `
+<div
+  className="component"
+>
+  <p>
+    Do people have enough food to eat and are they receiving basic medical care? 
+  </p>
+  <ul>
+    <li
+      class="list-item"
+      title="Age-standardized Disability-Adjusted Life Years (DALYs) rate caused by HIV/AIDS, tuberculosis, diarrhea, intestinal infections, respiratory infections, otitis media, meningitis, encephalitis, diptheria, whooping cough, tetanus, measles, varicella, herpes zoster, malaria, Chagas disease, leishmaniasis, typanosomiasis, schistosomiasis, cysticercosis, cycstic echinococcosis, lymphatic filariasis, onchocerciasis, trachoma, dengue, yellow feber, rabies, intestinal nematode infections, food-borne trematodiases, leprosy, ebola, zika virus, guinea worm disease, sexually transmitted diseases (excluding HIV), hepatitis, and other infectious diseases per 100,000 people."
+    >
+      Infectious diseases 
+      <a
+        class="citation"
+        href="http://ghdx.healthdata.org/gbd-results-tool"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Institute for Health Metrics and Evaluation"
+      >
+        ⓘ
+      </a>
+    </li>
+    <li
+      class="list-item"
+      title="Probability of dying between birth and exactly 5 years of age, expressed per 1,000 live births. "
+    >
+      Child mortality rate 
+      <a
+        class="citation"
+        href="http://www.childmortality.org"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="UN Inter-agency Group for Child Mortality Estimation"
+      >
+        ⓘ
+      </a>
+    </li>
+    <li
+      class="list-item"
+      title="Risk-weighted prevalence of stunting in children under 5 as measured by the summary exposure value (SEV) for child stunting. "
+    >
+      Child stunting 
+      <a
+        class="citation"
+        href="http://ghdx.healthdata.org/gbd-results-tool"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Institute for Health Metrics and Evaluation"
+      >
+        ⓘ
+      </a>
+    </li>
+    <li
+      class="list-item"
+      title="Maternal deaths per 100,000 livebirths in women aged 10-54 years."
+    >
+      Maternal mortality rate 
+      <a
+        class="citation"
+        href="http://ghdx.healthdata.org/record/ihme-data/gbd-2017-health-related-sdgs-1990-2030"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Institute for Health Metrics and Evaluation"
+      >
+        ⓘ
+      </a>
+    </li>
+    <li
+      class="list-item"
+      title="The prevalence of undernourishment expresses the probability that a randomly selected individual from the population consumes an amount of calories that is insufficient to cover her/his energy requirement for an active and healthy life. The indicator is computed by comparing a probability distribution of habitual daily dietary energy consumption with a threshold level called the minimum dietary energy requirement. Both are based on the notion of an average individual in the reference population."
+    >
+      Undernourishment 
+      <a
+        class="citation"
+        href="http://www.fao.org/economic/ess/ess-fs/ess-fadata/en/"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Food and Agriculture Organization of the United Nations"
+      >
+        ⓘ
+      </a>
+    </li>
+    <li
+      class="list-item"
+      title="Risk-weighted, age-standardized prevalence of nutrition low in fruits and vegetables as measured by the summary exposure value (SEV)."
+    >
+      Diet low in fruits and vegetables
+      <a
+        class="citation"
+        href="http://ghdx.healthdata.org/gbd-results-tool"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Institute for Health Metrics and Evaluation"
+      >
+        ⓘ
+      </a>
+    </li>
+  </ul>
+  <img
+    alt="Do people have enough food to eat and are they receiving basic medical care? "
+    className="component-img"
+    src="test-file"
+  />
+  <h5
+    class="component-title"
+    style="backgroundColor: rgb(225, 100, 100)"
+  >
+    Nutrition and Basic Medical Care
+  </h5>
+</div>
+`;
+
 exports[`Tests React Components Should create multiple links from a single object 1`] = `
 <li
   class="list-item"

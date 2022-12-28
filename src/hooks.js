@@ -29,7 +29,17 @@ export const useDimensions = (data) => {
 
 }
 
+export const nestedData = ()=> {
 
+let uniqueDimensionStrings = new Set(definitionsJSON.definitionsArray.map(JSON.stringify));
+let uniqueDimensionsArray = Array.from(uniqueDimensionStrings);
+let uniqueDimensionsObjects = new Set(uniqueDimensionsArray.map(JSON.parse));
+let uniqueDimensions = new Set(definitionsJSON.definitionsArray.map(({ dimension })=> dimension? dimension : null));
+
+return uniqueDimensions;
+
+
+};
 
 export const regEx = (d) => {
   return d.replace(/ /g, "_");

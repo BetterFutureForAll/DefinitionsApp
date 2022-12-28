@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Indicator = ({ props }) => {
-  
+
   // citations split fn to create multiple <a href> 
   let links = props.link.split(/\r?\n/);
   let sources = props.source.split(/;/);
@@ -57,4 +57,10 @@ export default Indicator;
   "link": "http://www.childmortality.org",
   "notes": "In the SPI calculations the indicator is capped at the upper boundary at 155.6328 deaths per 1,000 live births."
 }
+*/
+
+/* 
+<div class="more-info">
+The number of universities in a country weighted by the quality of universities, measured by university rankings on any of the three most widely used international assessments. Universities in the top 400 on any list are given double weight. Not ranked universities are given 5% weight of the top ranked universities.
+</div>
 */
