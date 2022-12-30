@@ -1,3 +1,93 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Containers separate data into their unique Dimensions and Components creates props of unique components as an array 1`] = `null`;
+exports[`Containers separate data into their unique Dimensions and Components Creates Component-Box container with multiple Components 1`] = `
+<div
+  className="component-box"
+>
+  <div
+    className="component"
+    id="Nutrition_and_Basic_Medical_Care"
+  >
+    <p>
+      Do people have enough food to eat and are they receiving basic medical care? 
+    </p>
+    <ul>
+      <li
+        class="list-item"
+        title="d"
+      >
+        Infectious diseases 
+        <a
+          class="citation"
+          href="http://ghdx.healthdata.org/gbd-results-tool"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Institute for Health Metrics and Evaluation"
+        >
+          ⓘ
+        </a>
+      </li>
+      <li
+        class="list-item"
+        title="d"
+      >
+        Infectious diseases 
+        <a
+          class="citation"
+          href="http://ghdx.healthdata.org/gbd-results-tool"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Institute for Health Metrics and Evaluation"
+        >
+          ⓘ
+        </a>
+      </li>
+    </ul>
+    <img
+      alt="Do people have enough food to eat and are they receiving basic medical care? "
+      className="component-img"
+      src="test-file"
+    />
+    <h5
+      class="component-title"
+      style="backgroundColor: rgb(225, 100, 100)"
+    >
+      Nutrition and Basic Medical Care
+    </h5>
+  </div>
+  <div
+    className="component"
+    id="test"
+  >
+    <p />
+    <ul>
+      <li
+        class="list-item"
+        title="d"
+      >
+        Infectious diseases 
+        <a
+          class="citation"
+          href="http://ghdx.healthdata.org/gbd-results-tool"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Institute for Health Metrics and Evaluation"
+        >
+          ⓘ
+        </a>
+      </li>
+    </ul>
+    <img
+      alt=""
+      className="component-img"
+      src=""
+    />
+    <h5
+      class="component-title"
+      style="backgroundColor: "
+    >
+      test
+    </h5>
+  </div>
+</div>
+`;

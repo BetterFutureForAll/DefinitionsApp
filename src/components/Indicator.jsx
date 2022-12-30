@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Indicator = ({ props }) => {
-
   // citations split fn to create multiple <a href> 
+
+  console.log('indicator:', props);
   let links = props.link.split(/\r?\n/);
   let sources = props.source.split(/;/);
   let citations = [];

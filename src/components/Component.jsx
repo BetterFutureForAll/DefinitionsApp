@@ -80,7 +80,7 @@ let stampSwitch = (d) => {
 }
 
 
-const Component = ({ props }) => {
+const ComponentMaker = ({ props }) => {
 
   let definitionText = definitionSwitch(props[0].component)
   let stamp = stampSwitch(props[0].component)
@@ -105,11 +105,11 @@ const Component = ({ props }) => {
 
 };
 
-Component.propTypes = {
+ComponentMaker.propTypes = {
   props: PropTypes.array
 }
 
-export default Component;
+export default ComponentMaker;
 
 
 
