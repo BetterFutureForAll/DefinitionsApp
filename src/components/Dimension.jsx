@@ -9,7 +9,7 @@ const Dimension = ({ props }) => {
   let target = props[name];
 
   return (
-    <div className={`dim-${props.index} ${name}`} id={regEx(name)} key={regEx(name)}>
+    <div className={`dim-${props.index} dimension`} id={regEx(name)} key={regEx(name)}>
       <h3 id={regEx(name)} className="dimension-title">{name}</h3>
       <Components props={target} key={props.index}></Components>
     </div>)
