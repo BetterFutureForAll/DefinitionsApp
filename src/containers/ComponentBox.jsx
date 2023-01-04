@@ -1,15 +1,15 @@
 import React from "react";
 import ComponentMaker from "../components/Component";
-import { groupBy, useActive } from "../hooks";
+import { groupBy } from "../hooks";
 
 const Components = ({ props }) => {
   //group by SPI Component
-  let  [activeValue, toggler] = useActive();
+
   let groupedComponentObject = groupBy(props, 'component');
   let keys = Object.keys(groupedComponentObject);
   let mappedComponents = keys.map((d, i) => {
     let target = groupedComponentObject[d];
-    return <ComponentMaker props={target} activeValue={activeValue} toggler={toggler} key={i}></ComponentMaker>;
+    return <ComponentMaker props={target} key={i}></ComponentMaker>;
   }
   );
 

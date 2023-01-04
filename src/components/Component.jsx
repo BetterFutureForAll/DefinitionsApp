@@ -14,7 +14,7 @@ import personalRightsStamp from '../assets/stamps/rights.png';
 import personalSafetyStamp from '../assets/stamps/safety.png';
 import shelterStamp from '../assets/stamps/shelter.png';
 import waterAndSanitationStamp from '../assets/stamps/water.png';
-import { regEx } from '../hooks'
+import { regEx, useActive } from '../hooks'
 
 let textColorSwitch = (d) => {
   switch (regEx(d)) {
@@ -80,8 +80,8 @@ let stampSwitch = (d) => {
 }
 
 
-const ComponentMaker = ({ props, activeValue, toggler }) => {
-
+const ComponentMaker = ({ props }) => {
+  let  [activeValue, toggler] = useActive();
   let definitionText = definitionSwitch(props[0].component)
   let stamp = stampSwitch(props[0].component)
   let backgroundColor = textColorSwitch(props[0].component)
