@@ -1,13 +1,17 @@
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import Dimensions from './containers/DimensionBox';
 import data from './assets/definitions.json';
 
 function App() {
+  const [isActive, setActive] = useState("false");
+  const ToggleClass = () => {
+    setActive(!isActive); 
+   };
 
   return (
     <div className="definitionsApp" >
-      <Dimensions props={data.definitionsArray}/>
+      <Dimensions props={data.definitionsArray} clickHandler={ToggleClass}/>
     </div>
   );
 }

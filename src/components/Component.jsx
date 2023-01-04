@@ -80,26 +80,25 @@ let stampSwitch = (d) => {
 }
 
 
-const ComponentMaker = ({ props }) => {
+const ComponentMaker = ({ props, activeValue, toggler }) => {
 
   let definitionText = definitionSwitch(props[0].component)
   let stamp = stampSwitch(props[0].component)
   let backgroundColor = textColorSwitch(props[0].component)
-
   let indicators = props.map((prop, i) => {
     return <Indicator props={prop} key={i}></Indicator>
   })
 
   return (
-    <div className='component' id={regEx(props[0].component)}>
+    <div className={`component`} id={regEx(props[0].component)} onClick={toggler}>
       <p>
         {definitionText}
       </p>
       <ul>
         {indicators}
       </ul>
-      <img src={stamp} alt={definitionText} className='component-img'></img>
-      <h5 className="component-title" style={backgroundColor}>{props[0].component}</h5>
+      <img src={stamp} alt={definitionText} className={`component-img ${activeValue? ' active' : ''}`}></img>
+      <h5 className={`component-title${activeValue? ' active' : ''}`} style={backgroundColor}>{props[0].component}</h5>
     </div>
   )
 

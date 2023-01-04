@@ -1,3 +1,4 @@
+import { useState } from 'react';
 
 export const regEx = (d) => {
   return d.replace(/ /g, "_");
@@ -9,7 +10,6 @@ export const groupBy = (objectArray, property) => {
     const curGroup = acc[key] ?? [];
     return { ...acc, [key]: [...curGroup, obj] };
   }, {});
-
   // filter out blank fields 
   // mutates object
   function clean(obj) {
@@ -22,4 +22,10 @@ export const groupBy = (objectArray, property) => {
   }
 
   return clean(result);
+};
+
+export const useActive = (initialState) => {
+  const [activeValue, setActiveValue] = useState(initialState);
+  const toggler = () => { setActiveValue(!activeValue) };
+  return [activeValue, toggler]
 };
