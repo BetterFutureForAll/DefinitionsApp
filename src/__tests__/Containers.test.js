@@ -5,10 +5,9 @@ import renderer from 'react-test-renderer';
 
 
 describe('Containers separate data into their unique Dimensions and Components', () => {
+  let rawData = require('../assets/definitions.json');
 
   test('Creates Component-Box container with multiple Components', () => {
-
-    let rawData = require('../assets/definitions.json');
 
     const tree = renderer.create(<Components props={rawData.definitionsArray}></Components>).toJSON();
 
@@ -17,6 +16,11 @@ describe('Containers separate data into their unique Dimensions and Components',
   });
 
   test('Creates', () => {
+
+    const tree = renderer.create(<Dimensions props={rawData.definitionsArray}></Dimensions>).toJSON();
+
+    expect(tree).toMatchSnapshot();
+
     
   });
 

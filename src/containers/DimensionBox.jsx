@@ -1,12 +1,22 @@
 import React from "react";
-import data from '../assets/definitions.json';
+import Dimension from "../components/Dimension";
 import { groupBy } from "../hooks";
-const keyFixer = (key) => key.replace(/[ \t]+$/, '').replace(/ /g, "_");;
 
-const Dimensions = () => {
-let dimensionsData = groupBy(data, 'dimension')
-//return arrays of unique dimensions datasets
+const Dimensions = ({ props }) => {
 
+  let groupedDimensionObject = groupBy(props, 'dimension');
+  let keys = Object.keys(groupedDimensionObject);
+  let dimensionsMap = keys.map((key, i) => {
+    let target = groupedDimensionObject[key];
+    let props = { [key]: target, index: i }
+    return <Dimension props={props} key={i}></Dimension>
+  })
+
+  return(
+    <div className="div-wrapper">
+      {dimensionsMap}
+    </div>
+  )
 }
 
 export default Dimensions;
