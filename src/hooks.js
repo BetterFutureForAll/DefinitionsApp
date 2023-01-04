@@ -10,7 +10,7 @@ export const parsedDef = d3.csv(definitionsCSV, (data) => {
 
 export const useParsedData = () => {
   let [data, setData] = useState([]);
-  useEffect(()=> {
+  useEffect(() => {
     setData(definitionsJSON.definitionsArray)
   }, [])
   console.log(data);
@@ -18,10 +18,10 @@ export const useParsedData = () => {
 }
 
 export const useDimensions = (data) => {
-  let [dimensionGroups, setDimensionGroups ] = useState({});
-  
-  useEffect(()=> {
-    if(!data) return;
+  let [dimensionGroups, setDimensionGroups] = useState({});
+
+  useEffect(() => {
+    if (!data) return;
     // let groupedResult = data.group(({ dimension })=> dimension)
     // setDimensionGroups(groupedResult)
   }, [data])
@@ -34,11 +34,22 @@ export const regEx = (d) => {
 }
 
 export const groupBy = (objectArray, property) => {
-
-  return objectArray.reduce((acc, obj) => {
+  let result = objectArray.reduce((acc, obj) => {
     const key = obj[property];
     const curGroup = acc[key] ?? [];
-
     return { ...acc, [key]: [...curGroup, obj] };
   }, {});
+
+  // filter out blank fields 
+  // mutates object
+  function clean(obj) {
+    for (var propName in obj) {
+      if (propName === undefined || propName === 'undefined') {
+        delete obj[propName];
+      }
+    }
+    return obj;
+  }
+
+  return clean(result);
 };
