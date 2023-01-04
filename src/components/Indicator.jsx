@@ -16,7 +16,7 @@ const Indicator = ({ props }) => {
       key={citation.key}
       title={citation.source}
       href={citation.link}
-      class="citation"
+      className="citation"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -26,7 +26,7 @@ const Indicator = ({ props }) => {
   );
 
   return (
-    <li title={props.definition} class='list-item'>
+    <li title={props.definition} className='list-item'>
       {props.indicator_name}
       {citationGroup}
     </li>

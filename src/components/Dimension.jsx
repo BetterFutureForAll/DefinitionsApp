@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { groupBy, regEx } from '../hooks';
+import { regEx } from '../hooks';
 import Components from '../containers/ComponentBox';
 
 const Dimension = ({ props }) => {
@@ -18,7 +18,7 @@ const Dimension = ({ props }) => {
 };
 
 Dimension.propTypes = {
-
+  props: PropTypes.object,
 }
 
 export default Dimension;

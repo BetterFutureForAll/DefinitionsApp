@@ -18,22 +18,22 @@ import { regEx } from '../hooks'
 
 let textColorSwitch = (d) => {
   switch (regEx(d)) {
-    case "Nutrition_and_Basic_Medical_Care": return 'backgroundColor: rgb(225, 100, 100)';
-    case "Water_and_Sanitation": return 'backgroundColor: rgb(0, 150, 225)';
-    case "Shelter": return 'backgroundColor: rgb(255, 100, 255)';
-    case "Personal_Safety": return 'backgroundColor: rgb(100, 245, 25)';
+    case "Nutrition_and_Basic_Medical_Care": return { backgroundColor: 'rgb(225, 100, 100)' };
+    case "Water_and_Sanitation": return { backgroundColor: 'rgb(0, 150, 225)' };
+    case "Shelter": return { backgroundColor: 'rgb(255, 100, 255)' };
+    case "Personal_Safety": return { backgroundColor: 'rgb(100, 245, 25)' };
 
-    case "Access_to_Basic_Knowledge": return 'backgroundColor: rgb(255, 150, 150)';
-    case "Access_to_Information_and_Communications": return 'backgroundColor: rgb(255, 200, 80)';
-    case "Health_and_Wellness": return 'backgroundColor: rgb(225, 80, 225)';
-    case "Environmental_Quality": return 'backgroundColor: rgb(75, 250, 0)';
+    case "Access_to_Basic_Knowledge": return { backgroundColor: 'rgb(255, 150, 150)' };
+    case "Access_to_Information_and_Communications": return { backgroundColor: 'rgb(255, 200, 80)' };
+    case "Health_and_Wellness": return { backgroundColor: 'rgb(225, 80, 225)' };
+    case "Environmental_Quality": return { backgroundColor: 'rgb(75, 250, 0)' };
 
-    case "Personal_Rights": return 'backgroundColor: rgb(255, 178, 102)';
-    case "Personal_Freedom_and_Choice": return 'backgroundColor: rgb(255, 155, 255)';
-    case "Inclusiveness": return 'backgroundColor: rgb(75, 255, 255)';
-    case "Access_to_Advanced_Education": return 'backgroundColor: rgb(255, 255, 0)';
+    case "Personal_Rights": return { backgroundColor: 'rgb(255, 178, 102)' };
+    case "Personal_Freedom_and_Choice": return { backgroundColor: 'rgb(255, 155, 255)' };
+    case "Inclusiveness": return { backgroundColor: 'rgb(75, 255, 255)' };
+    case "Access_to_Advanced_Education": return { backgroundColor: 'rgb(255, 255, 0)' };
 
-    default: return 'backgroundColor: ';
+    default: return { backgroundColor: 'white' };
   }
 };
 
@@ -99,7 +99,7 @@ const ComponentMaker = ({ props }) => {
         {indicators}
       </ul>
       <img src={stamp} alt={definitionText} className='component-img'></img>
-      <h5 class="component-title" style={backgroundColor}>{props[0].component}</h5>
+      <h5 className="component-title" style={backgroundColor}>{props[0].component}</h5>
     </div>
   )
 

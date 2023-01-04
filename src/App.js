@@ -1,25 +1,13 @@
 import './App.css';
-import React, { useLayoutEffect, useRef } from 'react';
-import Draw from "./draw"
-import { parsedDef, regEx, useParsedData, useDimensions } from './hooks'
+import React from 'react';
+import Dimensions from './containers/DimensionBox';
+import data from './assets/definitions.json';
 
 function App() {
 
-  let svgRef = useRef();
-  let dataJSON = useParsedData();
-  let dimensionGroups = useDimensions(dataJSON);
-  console.log(dataJSON);
-  console.log(dimensionGroups);
-
-  useLayoutEffect(() => {
-    parsedDef.then(data => {
-      Draw(data, svgRef, regEx);
-    });
-
-  }, []);
-
   return (
-    <div className="definitionsApp" ref={svgRef} >
+    <div className="definitionsApp" >
+      <Dimensions props={data.definitionsArray}/>
     </div>
   );
 }
