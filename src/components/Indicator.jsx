@@ -9,7 +9,6 @@ const Indicator = ({ props }) => {
   let sources = props.source.split(/;/);
   let citations = [];
   links.forEach(function (d, i) {
-    console.log(sources[i]);
     citations.push({ link: links[i], source: sources[i], key: [i] })
   });
 
