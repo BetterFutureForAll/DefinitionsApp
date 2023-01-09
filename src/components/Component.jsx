@@ -81,7 +81,8 @@ let stampSwitch = (d) => {
 
 
 const ComponentMaker = ({ props }) => {
-  let  [activeValue, toggler] = useActive();
+  let  [activeValue, toggleOn, toggleOff ] = useActive();
+
   let definitionText = definitionSwitch(props[0].component)
   let stamp = stampSwitch(props[0].component)
   let backgroundColor = textColorSwitch(props[0].component)
@@ -90,7 +91,7 @@ const ComponentMaker = ({ props }) => {
   })
 
   return (
-    <div className={`component`} id={regEx(props[0].component)} onClick={toggler}>
+    <div className={`component`} id={regEx(props[0].component)} onMouseEnter={toggleOn} onMouseLeave={toggleOff}>
       <p>
         {definitionText}
       </p>

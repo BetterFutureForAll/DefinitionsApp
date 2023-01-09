@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Tooltip from './ToolTip';
 
 const Indicator = ({ props }) => {
   // citations split fn to create multiple <a href> 
@@ -26,9 +27,13 @@ const Indicator = ({ props }) => {
   );
 
   return (
-    <li title={props.definition} className='list-item'>
+    <li className='list-item'>
+    <Tooltip content={props.definition} direction={'bottom'}>
+    <div >
       {props.indicator_name}
       {citationGroup}
+    </div>
+    </Tooltip>
     </li>
   )
 };
