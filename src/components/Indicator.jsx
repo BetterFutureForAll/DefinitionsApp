@@ -9,13 +9,14 @@ const Indicator = ({ props }) => {
   let sources = props.source.split(/;/);
   let citations = [];
   links.forEach(function (d, i) {
+    console.log(sources[i]);
     citations.push({ link: links[i], source: sources[i], key: [i] })
   });
 
   let citationGroup = citations.map((citation) => (
     <a
       key={citation.key}
-      title={citation.source}
+      title={citation.source || citation.link}
       href={citation.link}
       className="citation"
       target="_blank"
