@@ -103,8 +103,8 @@
 /* Medium (Tablets, iPad, Horizontal Mobile */
 @media (max-width: 948px) {
   .Tooltip-Tip {
-    --width: 44vw;
-    --font-size: 1.8vm; 
+    --width: 40vw;
+    --font-size: 1.6vmin; 
   }
 }
 
@@ -112,6 +112,6 @@
 @media (max-width: 480px) {
   .Tooltip-Tip {
     --width: 74vw;
-    --font-size: 4vmin;
+    --font-size: 3vmin;
   }
 }
