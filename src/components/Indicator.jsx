@@ -29,10 +29,8 @@ const Indicator = ({ props }) => {
   return (
     <li className='list-item'>
     <Tooltip content={props.definition} direction={'bottom'}>
-    <div >
       {props.indicator_name}
       {citationGroup}
-    </div>
     </Tooltip>
     </li>
   )
