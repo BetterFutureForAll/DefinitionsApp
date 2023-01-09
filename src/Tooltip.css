@@ -3,24 +3,28 @@
   --tooltip-background-color: black;
   --tooltip-margin: 0;
   --tooltip-arrow-size: 6px;
+  --width: 24vw;
+  --font-size: 1.5vmin;
 }
 
 /* Wrapping */
 .Tooltip-Wrapper {
   display: inline-block;
   position: relative;
+  width: 100%;
 }
 
 /* Absolute positioning */
 .Tooltip-Tip {
   position: absolute;
   border-radius: 4px;
-  width: 20vw;
-  left: 50%;
+  width: var(--width);
+  left: 40%;
   transform: translateX(-50%);
   padding: 6px;
   color: var(--tooltip-text-color);
   background: var(--tooltip-background-color);
+  font-size: var(--font-size);
   font-family: sans-serif;
   line-height: 1;
   z-index: 100;
@@ -31,7 +35,7 @@
 /* CSS border triangles */
 .Tooltip-Tip::before {
   content: " ";
-  left: 50%;
+  left: 25%;
   border: solid transparent;
   height: 0;
   width: 0;
@@ -45,6 +49,7 @@
 .Tooltip-Tip.top {
   top: calc(var(--tooltip-margin) * -1);
 }
+
 /* CSS border triangles */
 .Tooltip-Tip.top::before {
   top: 100%;
@@ -93,4 +98,20 @@
   top: 50%;
   transform: translateX(0) translateY(-50%);
   border-left-color: var(--tooltip-background-color);
+}
+
+/* Medium (Tablets, iPad, Horizontal Mobile */
+@media (max-width: 948px) {
+  .Tooltip-Tip {
+    --width: 44vw;
+    --font-size: 1.8vm; 
+  }
+}
+
+/* Small / Mobile */
+@media (max-width: 480px) {
+  .Tooltip-Tip {
+    --width: 74vw;
+    --font-size: 4vmin;
+  }
 }

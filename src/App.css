@@ -71,7 +71,6 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  contain: content;
   font-family: 'Noteworthy', Fallback, sans-serif;
   margin: 2.5px;
 }
@@ -154,7 +153,6 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   box-sizing: border-box;
-  contain: content;
   place-items: center;
 }
 
@@ -238,6 +236,8 @@
 .component ul {
   grid-area: 1 / 1 / 2 / 2;
   position: absolute;
+  display: flex;
+  flex-direction: column;
   top: 20%;
   width: 80%;
   padding-inline-start: 4vmin;
@@ -246,6 +246,7 @@
 .component li {
   font-size: var(--font-size);
   font-family: Arial, sans-serif;
+  vertical-align: middle;
 
   li:active {
     font-weight: bold;
@@ -342,6 +343,7 @@
     --columns: 2;
     --gutter: 5px;
   }
+
   .component li .more-info {
     font-size: 1.8vmin;
   }
@@ -365,7 +367,7 @@
   .component ul {
     padding-inline-start: 7vmax;
   }
-  
+
   .component li .more-info {
     font-size: 3vmin;
   }
