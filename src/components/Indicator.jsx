@@ -15,7 +15,7 @@ const Indicator = ({ props }) => {
   let citationGroup = citations.map((citation) => (
     <a
       key={citation.key}
-      title={citation.source}
+      title={citation.source || citation.link}
       href={citation.link}
       className="citation"
       target="_blank"
