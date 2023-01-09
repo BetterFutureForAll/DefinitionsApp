@@ -1,7 +1,7 @@
 :root {
   --tooltip-text-color: white;
   --tooltip-background-color: black;
-  --tooltip-margin: 10px;
+  --tooltip-margin: 0;
   --tooltip-arrow-size: 6px;
 }
 
@@ -21,7 +21,6 @@
   padding: 6px;
   color: var(--tooltip-text-color);
   background: var(--tooltip-background-color);
-  font-size: 1.5vmin;
   font-family: sans-serif;
   line-height: 1;
   z-index: 100;
