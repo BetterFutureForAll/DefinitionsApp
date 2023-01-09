@@ -25,7 +25,11 @@ export const groupBy = (objectArray, property) => {
 };
 
 export const useActive = (initialState) => {
+  
   const [activeValue, setActiveValue] = useState(initialState);
-  const toggler = () => { setActiveValue(!activeValue) };
-  return [activeValue, toggler]
+
+  const toggleOn = () => { setActiveValue(true) };
+  const toggleOff = () => { setActiveValue(false) };
+
+  return [activeValue, toggleOn, toggleOff]
 };
