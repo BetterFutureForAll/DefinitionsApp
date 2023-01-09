@@ -1,21 +1,17 @@
 import './App.css';
-import React, { useLayoutEffect, useRef } from 'react';
-import Draw from "./draw"
-import { parsedDef, regEx } from './hooks'
+import React, { useState } from 'react';
+import Dimensions from './containers/DimensionBox';
+import data from './assets/definitions.json';
 
 function App() {
-
-  let svgRef = useRef();
-
-  useLayoutEffect(() => {
-    parsedDef.then(data => {
-      Draw(data, svgRef, regEx);
-    });
-
-  }, []);
+  const [isActive, setActive] = useState("false");
+  const ToggleClass = () => {
+    setActive(!isActive); 
+   };
 
   return (
-    <div className="definitionsApp" ref={svgRef} >
+    <div className="definitionsApp" >
+      <Dimensions props={data.definitionsArray} clickHandler={ToggleClass}/>
     </div>
   );
 }

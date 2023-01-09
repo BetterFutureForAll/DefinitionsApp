@@ -1,0 +1,3178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Containers separate data into their unique Dimensions and Components Creates 1`] = `
+<div
+  className="div-wrapper"
+>
+  <div
+    className="dim-0 dimension"
+    id="Basic_Human_Needs"
+  >
+    <h3
+      className="dimension-title"
+      id="Basic_Human_Needs"
+    >
+      Basic Human Needs
+    </h3>
+    <div
+      className="component-box"
+    >
+      <div
+        className="component"
+        id="Nutrition_and_Basic_Medical_Care"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <p>
+          Do people have enough food to eat and are they receiving basic medical care? 
+        </p>
+        <ul>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Infectious diseases 
+              <a
+                className="citation"
+                href="http://ghdx.healthdata.org/gbd-results-tool"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Institute for Health Metrics and Evaluation"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Child mortality rate 
+              <a
+                className="citation"
+                href="http://www.childmortality.org"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="UN Inter-agency Group for Child Mortality Estimation"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Child stunting 
+              <a
+                className="citation"
+                href="http://ghdx.healthdata.org/gbd-results-tool"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Institute for Health Metrics and Evaluation"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Maternal mortality rate 
+              <a
+                className="citation"
+                href="http://ghdx.healthdata.org/record/ihme-data/gbd-2017-health-related-sdgs-1990-2030"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Institute for Health Metrics and Evaluation"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Undernourishment 
+              <a
+                className="citation"
+                href="http://www.fao.org/economic/ess/ess-fs/ess-fadata/en/"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Food and Agriculture Organization of the United Nations"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Diet low in fruits and vegetables
+              <a
+                className="citation"
+                href="http://ghdx.healthdata.org/gbd-results-tool"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Institute for Health Metrics and Evaluation"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+        </ul>
+        <img
+          alt="Do people have enough food to eat and are they receiving basic medical care? "
+          className="component-img "
+          src="test-file"
+        />
+        <h5
+          className="component-title"
+          style={
+            Object {
+              "backgroundColor": "rgb(225, 100, 100)",
+            }
+          }
+        >
+          Nutrition and Basic Medical Care
+        </h5>
+      </div>
+      <div
+        className="component"
+        id="Water_and_Sanitation"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <p>
+          Can people drink water and keep themselves clean without getting sick?
+        </p>
+        <ul>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Access to improved sanitation 
+              <a
+                className="citation"
+                href="http://ghdx.healthdata.org/record/global-burden-disease-study-2019-gbd-2019-covariates-1980-2019"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Institute for Health Metrics and Evaluation"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Access to improved water source 
+              <a
+                className="citation"
+                href="http://ghdx.healthdata.org/record/global-burden-disease-study-2019-gbd-2019-covariates-1980-2019"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Institute for Health Metrics and Evaluation"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Unsafe water, sanitation and hygiene
+              <a
+                className="citation"
+                href="http://ghdx.healthdata.org/gbd-results-tool"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Institute for Health Metrics and Evaluation"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Satisfaction with water quality
+              <a
+                className="citation"
+                href="https://ga.gallup.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Gallup World Poll"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+        </ul>
+        <img
+          alt="Can people drink water and keep themselves clean without getting sick?"
+          className="component-img "
+          src="test-file"
+        />
+        <h5
+          className="component-title"
+          style={
+            Object {
+              "backgroundColor": "rgb(0, 150, 225)",
+            }
+          }
+        >
+          Water and Sanitation
+        </h5>
+      </div>
+      <div
+        className="component"
+        id="Shelter"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <p>
+          Do people have adequate housing with basic utilities?
+        </p>
+        <ul>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Household air pollution
+              <a
+                className="citation"
+                href="http://ghdx.healthdata.org/gbd-results-tool"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Institute for Health Metrics and Evaluation"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Dissatisfaction with housing affordability 
+              <a
+                className="citation"
+                href="https://ga.gallup.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Gallup World Poll"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Access to electricity 
+              <a
+                className="citation"
+                href="https://data.worldbank.org/indicator/EG.ELC.ACCS.ZS"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="SE4ALL Global Tracking Framework (World Bank, International Energy Agency, and the Energy Sector Management Assistance Program)"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Usage of clean fuels and technology for cooking 
+              <a
+                className="citation"
+                href="https://apps.who.int/gho/data/node.main.SDGFUELS712?lang=en"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="World Health Organization"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+        </ul>
+        <img
+          alt="Do people have adequate housing with basic utilities?"
+          className="component-img "
+          src="test-file"
+        />
+        <h5
+          className="component-title"
+          style={
+            Object {
+              "backgroundColor": "rgb(255, 100, 255)",
+            }
+          }
+        >
+          Shelter
+        </h5>
+      </div>
+      <div
+        className="component"
+        id="Personal_Safety"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <p>
+          Do people feel safe?
+        </p>
+        <ul>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Interpersonal violence  
+              <a
+                className="citation"
+                href="http://ghdx.healthdata.org/gbd-results-tool"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Institute for Health Metrics and Evaluation"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Transportation related injuries 
+              <a
+                className="citation"
+                href="http://ghdx.healthdata.org/gbd-results-tool"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Institute for Health Metrics and Evaluation"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Political killings and torture 
+              <a
+                className="citation"
+                href="https://v-dem.net/vdemds.html"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Varieties of Democracy (V-Dem), Dataset Version 12"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Intimate partner violence
+              <a
+                className="citation"
+                href="http://ghdx.healthdata.org/record/ihme-data/gbd-2017-health-related-sdgs-1990-2030"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Institute for Health Metrics and Evaluation"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Money stolen
+              <a
+                className="citation"
+                href="https://ga.gallup.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Gallup World Poll"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+        </ul>
+        <img
+          alt="Do people feel safe?"
+          className="component-img "
+          src="test-file"
+        />
+        <h5
+          className="component-title"
+          style={
+            Object {
+              "backgroundColor": "rgb(100, 245, 25)",
+            }
+          }
+        >
+          Personal Safety
+        </h5>
+      </div>
+    </div>
+  </div>
+  <div
+    className="dim-1 dimension"
+    id="Foundations_of_Wellbeing"
+  >
+    <h3
+      className="dimension-title"
+      id="Foundations_of_Wellbeing"
+    >
+      Foundations of Wellbeing
+    </h3>
+    <div
+      className="component-box"
+    >
+      <div
+        className="component"
+        id="Access_to_Basic_Knowledge"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <p>
+          Do people have access to an educational foundation?
+        </p>
+        <ul>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Population with no schooling 
+              <a
+                className="citation"
+                href="http://ghdx.healthdata.org/record/global-burden-disease-study-2019-gbd-2019-covariates-1980-2019"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Institute for Health Metrics and Evaluation"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Equal access to quality education 
+              <a
+                className="citation"
+                href="https://v-dem.net/vdemds.html"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Varieties of Democracy (V-Dem), Dataset Version 12"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Primary school enrollment 
+              <a
+                className="citation"
+                href="http://data.uis.unesco.org/"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="UN Educational, Scientific, and Cultural Organization Institute for Statistics"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Secondary school attainment 
+              <a
+                className="citation"
+                href="http://hdr.undp.org/en/data"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="United Nations Development Programme (UNDP) Human Development Data"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Gender parity in secondary attainment 
+              <a
+                className="citation"
+                href="http://hdr.undp.org/en/data"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="United Nations Development Programme (UNDP) Human Development Data"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+        </ul>
+        <img
+          alt="Do people have access to an educational foundation?"
+          className="component-img "
+          src="test-file"
+        />
+        <h5
+          className="component-title"
+          style={
+            Object {
+              "backgroundColor": "rgb(255, 150, 150)",
+            }
+          }
+        >
+          Access to Basic Knowledge
+        </h5>
+      </div>
+      <div
+        className="component"
+        id="Access_to_Information_and_Communications"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <p>
+          Can people freely access ideas and in formation from anywhere in the world?
+        </p>
+        <ul>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Access to online governance 
+              <a
+                className="citation"
+                href="https://publicadministration.un.org/egovkb/en-us/Data-Center"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="UN Department of Economic and Social Affairs E-Government Survey"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Internet users 
+              <a
+                className="citation"
+                href="http://www.itu.int/en/ITU-D/Statistics/Pages/stat/default.aspx"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="International Telecommunications Union "
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Mobile telephone subscriptions 
+              <a
+                className="citation"
+                href="http://www.itu.int/en/ITU-D/Statistics/Pages/stat/default.aspx"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="International Telecommunications Union "
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Alternative sources of information index
+              <a
+                className="citation"
+                href="https://v-dem.net/vdemds.html"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Varieties of Democracy (V-Dem), Dataset Version 12"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+        </ul>
+        <img
+          alt="Can people freely access ideas and in formation from anywhere in the world?"
+          className="component-img "
+          src="test-file"
+        />
+        <h5
+          className="component-title"
+          style={
+            Object {
+              "backgroundColor": "rgb(255, 200, 80)",
+            }
+          }
+        >
+          Access to Information and Communications
+        </h5>
+      </div>
+      <div
+        className="component"
+        id="Health_and_Wellness"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <p>
+          Do people live long and healthy lives?
+        </p>
+        <ul>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Life expectancy at 60 
+              <a
+                className="citation"
+                href="http://ghdx.healthdata.org/gbd-results-tool"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Institute for Health Metrics and Evaluation"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Premature deaths from non-communicable diseases 
+              <a
+                className="citation"
+                href="http://ghdx.healthdata.org/record/ihme-data/gbd-2017-health-related-sdgs-1990-2030"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Institute for Health Metrics and Evaluation"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Equal access to quality healthcare 
+              <a
+                className="citation"
+                href="https://v-dem.net/vdemds.html"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Varieties of Democracy (V-Dem), Dataset Version 12"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Access to essential health services 
+              <a
+                className="citation"
+                href="http://ghdx.healthdata.org/record/global-burden-disease-study-2019-gbd-2019-covariates-1980-2019"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Institute for Health Metrics and Evaluation"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Satisfaction with availability of quality healthcare
+              <a
+                className="citation"
+                href="https://ga.gallup.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Gallup World Poll"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+        </ul>
+        <img
+          alt="Do people live long and healthy lives?"
+          className="component-img "
+          src="test-file"
+        />
+        <h5
+          className="component-title"
+          style={
+            Object {
+              "backgroundColor": "rgb(225, 80, 225)",
+            }
+          }
+        >
+          Health and Wellness
+        </h5>
+      </div>
+      <div
+        className="component"
+        id="Environmental_Quality"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <p>
+          Is this society using its resources so they will be available for future generations?
+        </p>
+        <ul>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Outdoor air pollution
+              <a
+                className="citation"
+                href="http://ghdx.healthdata.org/gbd-results-tool"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Institute for Health Metrics and Evaluation"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Lead exposure 
+              <a
+                className="citation"
+                href="http://ghdx.healthdata.org/gbd-results-tool"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Institute for Health Metrics and Evaluation"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Particulate matter pollution 
+              <a
+                className="citation"
+                href="http://ghdx.healthdata.org/record/global-burden-disease-study-2019-gbd-2019-covariates-1980-2019"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Institute for Health Metrics and Evaluation"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Species protection 
+              <a
+                className="citation"
+                href="https://epi.yale.edu/"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Environmental Performance Index
+Map of Life"
+              >
+                ⓘ
+              </a>
+              <a
+                className="citation"
+                href="https://mol.org/indicators/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+        </ul>
+        <img
+          alt="Is this society using its resources so they will be available for future generations?"
+          className="component-img "
+          src="test-file"
+        />
+        <h5
+          className="component-title"
+          style={
+            Object {
+              "backgroundColor": "rgb(75, 250, 0)",
+            }
+          }
+        >
+          Environmental Quality
+        </h5>
+      </div>
+    </div>
+  </div>
+  <div
+    className="dim-2 dimension"
+    id="Opportunity"
+  >
+    <h3
+      className="dimension-title"
+      id="Opportunity"
+    >
+      Opportunity
+    </h3>
+    <div
+      className="component-box"
+    >
+      <div
+        className="component"
+        id="Personal_Rights"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <p>
+          Are people’s rights as individuals protected?
+        </p>
+        <ul>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Access to justice 
+              <a
+                className="citation"
+                href="https://v-dem.net/vdemds.html"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Varieties of Democracy (V-Dem), Dataset Version 12"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Freedom of religion 
+              <a
+                className="citation"
+                href="https://v-dem.net/vdemds.html"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Varieties of Democracy (V-Dem), Dataset Version 12"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Political rights 
+              <a
+                className="citation"
+                href="https://freedomhouse.org/report-types/freedom-world"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Freedom House"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Property rights for women 
+              <a
+                className="citation"
+                href="https://v-dem.net/vdemds.html"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Varieties of Democracy (V-Dem), Dataset Version 12"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Freedom of peaceful assembly 
+              <a
+                className="citation"
+                href="https://v-dem.net/vdemds.html"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Varieties of Democracy (V-Dem), Dataset Version 12"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Freedom of discussion
+              <a
+                className="citation"
+                href="https://v-dem.net/vdemds.html"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Varieties of Democracy (V-Dem), Dataset Version 12"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+        </ul>
+        <img
+          alt="Are people’s rights as individuals protected?"
+          className="component-img "
+          src="test-file"
+        />
+        <h5
+          className="component-title"
+          style={
+            Object {
+              "backgroundColor": "rgb(255, 178, 102)",
+            }
+          }
+        >
+          Personal Rights
+        </h5>
+      </div>
+      <div
+        className="component"
+        id="Personal_Freedom_and_Choice"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <p>
+          Are people free to make their own life choices?
+        </p>
+        <ul>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Satisfied demand for contraception 
+              <a
+                className="citation"
+                href="http://www.un.org/en/development/desa/population/theme/family-planning/cp_model.shtml"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="United Nations Population Division"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Perception of corruption 
+              <a
+                className="citation"
+                href="www.transparency.org/cpi"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Transparency International"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Early marriage 
+              <a
+                className="citation"
+                href="https://www.un.org/en/development/desa/population/theme/marriage-unions/marriage_estimates.asp"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="United Nations Population Division"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Young people not in education, employment or training 
+              <a
+                className="citation"
+                href="https://ilostat.ilo.org/data/"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="International Labor Organization"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Vulnerable employment 
+              <a
+                className="citation"
+                href="https://data.worldbank.org/indicator/SL.EMP.VULN.ZS"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="International Labor Organization/World Bank"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Freedom of domestic movement
+              <a
+                className="citation"
+                href="https://v-dem.net/vdemds.html"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Varieties of Democracy (V-Dem), Dataset Version 12"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+        </ul>
+        <img
+          alt="Are people free to make their own life choices?"
+          className="component-img "
+          src="test-file"
+        />
+        <h5
+          className="component-title"
+          style={
+            Object {
+              "backgroundColor": "rgb(255, 155, 255)",
+            }
+          }
+        >
+          Personal Freedom and Choice
+        </h5>
+      </div>
+      <div
+        className="component"
+        id="Inclusiveness"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <p>
+          Is no one excluded from the opportunity to be a contributing member of society?
+        </p>
+        <ul>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Equal protection index
+              <a
+                className="citation"
+                href="https://v-dem.net/vdemds.html"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Varieties of Democracy (V-Dem), Dataset Version 12"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Equal access index
+              <a
+                className="citation"
+                href="https://v-dem.net/vdemds.html"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Varieties of Democracy (V-Dem), Dataset Version 12"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Power distributed by sexual orientation
+              <a
+                className="citation"
+                href="https://v-dem.net/vdemds.html"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Varieties of Democracy (V-Dem), Dataset Version 12"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Access to public services distributed by social group
+              <a
+                className="citation"
+                href="https://v-dem.net/vdemds.html"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Varieties of Democracy (V-Dem), Dataset Version 12"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Discrimination and violence against minorities 
+              <a
+                className="citation"
+                href="https://fragilestatesindex.org/"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Fund for Peace Fragile States Index"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Acceptance of gays and lesbians 
+              <a
+                className="citation"
+                href="https://ga.gallup.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Gallup World Poll"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+        </ul>
+        <img
+          alt="Is no one excluded from the opportunity to be a contributing member of society?"
+          className="component-img "
+          src="test-file"
+        />
+        <h5
+          className="component-title"
+          style={
+            Object {
+              "backgroundColor": "rgb(75, 255, 255)",
+            }
+          }
+        >
+          Inclusiveness
+        </h5>
+      </div>
+      <div
+        className="component"
+        id="Access_to_Advanced_Education"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <p>
+          Do people have access to the world’s most advanced knowledge?
+        </p>
+        <ul>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Citable documents 
+              <a
+                className="citation"
+                href="https://www.scimagojr.com/countryrank.php"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Scimago Journal & Country Rank"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Academic freedom 
+              <a
+                className="citation"
+                href="https://v-dem.net/vdemds.html"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Varieties of Democracy (V-Dem), Dataset Version 12"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Women with advanced education 
+              <a
+                className="citation"
+                href="http://ghdx.healthdata.org/record/global-burden-disease-study-2019-gbd-2019-covariates-1980-2019"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Institute for Health Metrics and Evaluation"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Expected years of tertiary schooling 
+              <a
+                className="citation"
+                href="http://data.uis.unesco.org/"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="UN Educational, Scientific, and Cultural Organization Institute for Statistics"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+          <li
+            className="list-item"
+          >
+            <div
+              className="Tooltip-Wrapper"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Quality weighted universities 
+              <a
+                className="citation"
+                href="https://www.timeshighereducation.com/world-university-rankings/2022"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Times Higher Education World University Rankings, QS World University Rankings, and Academic Ranking of World Universities"
+              >
+                ⓘ
+              </a>
+              <a
+                className="citation"
+                href="https://www.topuniversities.com/university-rankings/world-university-rankings/2023"
+                rel="noopener noreferrer"
+                target="_blank"
+                title=" Varieties of Democracy (V-Dem), Dataset Version 12 "
+              >
+                ⓘ
+              </a>
+              <a
+                className="citation"
+                href="https://www.shanghairanking.com/rankings/arwu/2020"
+                rel="noopener noreferrer"
+                target="_blank"
+                title=" SPI calculations"
+              >
+                ⓘ
+              </a>
+              <a
+                className="citation"
+                href="https://v-dem.net/vdemds.html"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                ⓘ
+              </a>
+            </div>
+          </li>
+        </ul>
+        <img
+          alt="Do people have access to the world’s most advanced knowledge?"
+          className="component-img "
+          src="test-file"
+        />
+        <h5
+          className="component-title"
+          style={
+            Object {
+              "backgroundColor": "rgb(255, 255, 0)",
+            }
+          }
+        >
+          Access to Advanced Education
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Containers separate data into their unique Dimensions and Components Creates Component-Box container with multiple Components 1`] = `
+<div
+  className="component-box"
+>
+  <div
+    className="component"
+    id="Nutrition_and_Basic_Medical_Care"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <p>
+      Do people have enough food to eat and are they receiving basic medical care? 
+    </p>
+    <ul>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Infectious diseases 
+          <a
+            className="citation"
+            href="http://ghdx.healthdata.org/gbd-results-tool"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Institute for Health Metrics and Evaluation"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Child mortality rate 
+          <a
+            className="citation"
+            href="http://www.childmortality.org"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="UN Inter-agency Group for Child Mortality Estimation"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Child stunting 
+          <a
+            className="citation"
+            href="http://ghdx.healthdata.org/gbd-results-tool"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Institute for Health Metrics and Evaluation"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Maternal mortality rate 
+          <a
+            className="citation"
+            href="http://ghdx.healthdata.org/record/ihme-data/gbd-2017-health-related-sdgs-1990-2030"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Institute for Health Metrics and Evaluation"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Undernourishment 
+          <a
+            className="citation"
+            href="http://www.fao.org/economic/ess/ess-fs/ess-fadata/en/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Food and Agriculture Organization of the United Nations"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Diet low in fruits and vegetables
+          <a
+            className="citation"
+            href="http://ghdx.healthdata.org/gbd-results-tool"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Institute for Health Metrics and Evaluation"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+    </ul>
+    <img
+      alt="Do people have enough food to eat and are they receiving basic medical care? "
+      className="component-img "
+      src="test-file"
+    />
+    <h5
+      className="component-title"
+      style={
+        Object {
+          "backgroundColor": "rgb(225, 100, 100)",
+        }
+      }
+    >
+      Nutrition and Basic Medical Care
+    </h5>
+  </div>
+  <div
+    className="component"
+    id="Water_and_Sanitation"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <p>
+      Can people drink water and keep themselves clean without getting sick?
+    </p>
+    <ul>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Access to improved sanitation 
+          <a
+            className="citation"
+            href="http://ghdx.healthdata.org/record/global-burden-disease-study-2019-gbd-2019-covariates-1980-2019"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Institute for Health Metrics and Evaluation"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Access to improved water source 
+          <a
+            className="citation"
+            href="http://ghdx.healthdata.org/record/global-burden-disease-study-2019-gbd-2019-covariates-1980-2019"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Institute for Health Metrics and Evaluation"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Unsafe water, sanitation and hygiene
+          <a
+            className="citation"
+            href="http://ghdx.healthdata.org/gbd-results-tool"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Institute for Health Metrics and Evaluation"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Satisfaction with water quality
+          <a
+            className="citation"
+            href="https://ga.gallup.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Gallup World Poll"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+    </ul>
+    <img
+      alt="Can people drink water and keep themselves clean without getting sick?"
+      className="component-img "
+      src="test-file"
+    />
+    <h5
+      className="component-title"
+      style={
+        Object {
+          "backgroundColor": "rgb(0, 150, 225)",
+        }
+      }
+    >
+      Water and Sanitation
+    </h5>
+  </div>
+  <div
+    className="component"
+    id="Shelter"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <p>
+      Do people have adequate housing with basic utilities?
+    </p>
+    <ul>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Household air pollution
+          <a
+            className="citation"
+            href="http://ghdx.healthdata.org/gbd-results-tool"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Institute for Health Metrics and Evaluation"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Dissatisfaction with housing affordability 
+          <a
+            className="citation"
+            href="https://ga.gallup.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Gallup World Poll"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Access to electricity 
+          <a
+            className="citation"
+            href="https://data.worldbank.org/indicator/EG.ELC.ACCS.ZS"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="SE4ALL Global Tracking Framework (World Bank, International Energy Agency, and the Energy Sector Management Assistance Program)"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Usage of clean fuels and technology for cooking 
+          <a
+            className="citation"
+            href="https://apps.who.int/gho/data/node.main.SDGFUELS712?lang=en"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="World Health Organization"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+    </ul>
+    <img
+      alt="Do people have adequate housing with basic utilities?"
+      className="component-img "
+      src="test-file"
+    />
+    <h5
+      className="component-title"
+      style={
+        Object {
+          "backgroundColor": "rgb(255, 100, 255)",
+        }
+      }
+    >
+      Shelter
+    </h5>
+  </div>
+  <div
+    className="component"
+    id="Personal_Safety"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <p>
+      Do people feel safe?
+    </p>
+    <ul>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Interpersonal violence  
+          <a
+            className="citation"
+            href="http://ghdx.healthdata.org/gbd-results-tool"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Institute for Health Metrics and Evaluation"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Transportation related injuries 
+          <a
+            className="citation"
+            href="http://ghdx.healthdata.org/gbd-results-tool"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Institute for Health Metrics and Evaluation"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Political killings and torture 
+          <a
+            className="citation"
+            href="https://v-dem.net/vdemds.html"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Varieties of Democracy (V-Dem), Dataset Version 12"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Intimate partner violence
+          <a
+            className="citation"
+            href="http://ghdx.healthdata.org/record/ihme-data/gbd-2017-health-related-sdgs-1990-2030"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Institute for Health Metrics and Evaluation"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Money stolen
+          <a
+            className="citation"
+            href="https://ga.gallup.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Gallup World Poll"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+    </ul>
+    <img
+      alt="Do people feel safe?"
+      className="component-img "
+      src="test-file"
+    />
+    <h5
+      className="component-title"
+      style={
+        Object {
+          "backgroundColor": "rgb(100, 245, 25)",
+        }
+      }
+    >
+      Personal Safety
+    </h5>
+  </div>
+  <div
+    className="component"
+    id="Access_to_Basic_Knowledge"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <p>
+      Do people have access to an educational foundation?
+    </p>
+    <ul>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Population with no schooling 
+          <a
+            className="citation"
+            href="http://ghdx.healthdata.org/record/global-burden-disease-study-2019-gbd-2019-covariates-1980-2019"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Institute for Health Metrics and Evaluation"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Equal access to quality education 
+          <a
+            className="citation"
+            href="https://v-dem.net/vdemds.html"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Varieties of Democracy (V-Dem), Dataset Version 12"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Primary school enrollment 
+          <a
+            className="citation"
+            href="http://data.uis.unesco.org/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="UN Educational, Scientific, and Cultural Organization Institute for Statistics"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Secondary school attainment 
+          <a
+            className="citation"
+            href="http://hdr.undp.org/en/data"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="United Nations Development Programme (UNDP) Human Development Data"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Gender parity in secondary attainment 
+          <a
+            className="citation"
+            href="http://hdr.undp.org/en/data"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="United Nations Development Programme (UNDP) Human Development Data"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+    </ul>
+    <img
+      alt="Do people have access to an educational foundation?"
+      className="component-img "
+      src="test-file"
+    />
+    <h5
+      className="component-title"
+      style={
+        Object {
+          "backgroundColor": "rgb(255, 150, 150)",
+        }
+      }
+    >
+      Access to Basic Knowledge
+    </h5>
+  </div>
+  <div
+    className="component"
+    id="Access_to_Information_and_Communications"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <p>
+      Can people freely access ideas and in formation from anywhere in the world?
+    </p>
+    <ul>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Access to online governance 
+          <a
+            className="citation"
+            href="https://publicadministration.un.org/egovkb/en-us/Data-Center"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="UN Department of Economic and Social Affairs E-Government Survey"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Internet users 
+          <a
+            className="citation"
+            href="http://www.itu.int/en/ITU-D/Statistics/Pages/stat/default.aspx"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="International Telecommunications Union "
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Mobile telephone subscriptions 
+          <a
+            className="citation"
+            href="http://www.itu.int/en/ITU-D/Statistics/Pages/stat/default.aspx"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="International Telecommunications Union "
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Alternative sources of information index
+          <a
+            className="citation"
+            href="https://v-dem.net/vdemds.html"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Varieties of Democracy (V-Dem), Dataset Version 12"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+    </ul>
+    <img
+      alt="Can people freely access ideas and in formation from anywhere in the world?"
+      className="component-img "
+      src="test-file"
+    />
+    <h5
+      className="component-title"
+      style={
+        Object {
+          "backgroundColor": "rgb(255, 200, 80)",
+        }
+      }
+    >
+      Access to Information and Communications
+    </h5>
+  </div>
+  <div
+    className="component"
+    id="Health_and_Wellness"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <p>
+      Do people live long and healthy lives?
+    </p>
+    <ul>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Life expectancy at 60 
+          <a
+            className="citation"
+            href="http://ghdx.healthdata.org/gbd-results-tool"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Institute for Health Metrics and Evaluation"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Premature deaths from non-communicable diseases 
+          <a
+            className="citation"
+            href="http://ghdx.healthdata.org/record/ihme-data/gbd-2017-health-related-sdgs-1990-2030"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Institute for Health Metrics and Evaluation"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Equal access to quality healthcare 
+          <a
+            className="citation"
+            href="https://v-dem.net/vdemds.html"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Varieties of Democracy (V-Dem), Dataset Version 12"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Access to essential health services 
+          <a
+            className="citation"
+            href="http://ghdx.healthdata.org/record/global-burden-disease-study-2019-gbd-2019-covariates-1980-2019"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Institute for Health Metrics and Evaluation"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Satisfaction with availability of quality healthcare
+          <a
+            className="citation"
+            href="https://ga.gallup.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Gallup World Poll"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+    </ul>
+    <img
+      alt="Do people live long and healthy lives?"
+      className="component-img "
+      src="test-file"
+    />
+    <h5
+      className="component-title"
+      style={
+        Object {
+          "backgroundColor": "rgb(225, 80, 225)",
+        }
+      }
+    >
+      Health and Wellness
+    </h5>
+  </div>
+  <div
+    className="component"
+    id="Environmental_Quality"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <p>
+      Is this society using its resources so they will be available for future generations?
+    </p>
+    <ul>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Outdoor air pollution
+          <a
+            className="citation"
+            href="http://ghdx.healthdata.org/gbd-results-tool"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Institute for Health Metrics and Evaluation"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Lead exposure 
+          <a
+            className="citation"
+            href="http://ghdx.healthdata.org/gbd-results-tool"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Institute for Health Metrics and Evaluation"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Particulate matter pollution 
+          <a
+            className="citation"
+            href="http://ghdx.healthdata.org/record/global-burden-disease-study-2019-gbd-2019-covariates-1980-2019"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Institute for Health Metrics and Evaluation"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Species protection 
+          <a
+            className="citation"
+            href="https://epi.yale.edu/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Environmental Performance Index
+Map of Life"
+          >
+            ⓘ
+          </a>
+          <a
+            className="citation"
+            href="https://mol.org/indicators/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+    </ul>
+    <img
+      alt="Is this society using its resources so they will be available for future generations?"
+      className="component-img "
+      src="test-file"
+    />
+    <h5
+      className="component-title"
+      style={
+        Object {
+          "backgroundColor": "rgb(75, 250, 0)",
+        }
+      }
+    >
+      Environmental Quality
+    </h5>
+  </div>
+  <div
+    className="component"
+    id="Personal_Rights"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <p>
+      Are people’s rights as individuals protected?
+    </p>
+    <ul>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Access to justice 
+          <a
+            className="citation"
+            href="https://v-dem.net/vdemds.html"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Varieties of Democracy (V-Dem), Dataset Version 12"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Freedom of religion 
+          <a
+            className="citation"
+            href="https://v-dem.net/vdemds.html"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Varieties of Democracy (V-Dem), Dataset Version 12"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Political rights 
+          <a
+            className="citation"
+            href="https://freedomhouse.org/report-types/freedom-world"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Freedom House"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Property rights for women 
+          <a
+            className="citation"
+            href="https://v-dem.net/vdemds.html"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Varieties of Democracy (V-Dem), Dataset Version 12"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Freedom of peaceful assembly 
+          <a
+            className="citation"
+            href="https://v-dem.net/vdemds.html"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Varieties of Democracy (V-Dem), Dataset Version 12"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Freedom of discussion
+          <a
+            className="citation"
+            href="https://v-dem.net/vdemds.html"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Varieties of Democracy (V-Dem), Dataset Version 12"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+    </ul>
+    <img
+      alt="Are people’s rights as individuals protected?"
+      className="component-img "
+      src="test-file"
+    />
+    <h5
+      className="component-title"
+      style={
+        Object {
+          "backgroundColor": "rgb(255, 178, 102)",
+        }
+      }
+    >
+      Personal Rights
+    </h5>
+  </div>
+  <div
+    className="component"
+    id="Personal_Freedom_and_Choice"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <p>
+      Are people free to make their own life choices?
+    </p>
+    <ul>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Satisfied demand for contraception 
+          <a
+            className="citation"
+            href="http://www.un.org/en/development/desa/population/theme/family-planning/cp_model.shtml"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="United Nations Population Division"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Perception of corruption 
+          <a
+            className="citation"
+            href="www.transparency.org/cpi"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Transparency International"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Early marriage 
+          <a
+            className="citation"
+            href="https://www.un.org/en/development/desa/population/theme/marriage-unions/marriage_estimates.asp"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="United Nations Population Division"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Young people not in education, employment or training 
+          <a
+            className="citation"
+            href="https://ilostat.ilo.org/data/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="International Labor Organization"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Vulnerable employment 
+          <a
+            className="citation"
+            href="https://data.worldbank.org/indicator/SL.EMP.VULN.ZS"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="International Labor Organization/World Bank"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Freedom of domestic movement
+          <a
+            className="citation"
+            href="https://v-dem.net/vdemds.html"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Varieties of Democracy (V-Dem), Dataset Version 12"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+    </ul>
+    <img
+      alt="Are people free to make their own life choices?"
+      className="component-img "
+      src="test-file"
+    />
+    <h5
+      className="component-title"
+      style={
+        Object {
+          "backgroundColor": "rgb(255, 155, 255)",
+        }
+      }
+    >
+      Personal Freedom and Choice
+    </h5>
+  </div>
+  <div
+    className="component"
+    id="Inclusiveness"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <p>
+      Is no one excluded from the opportunity to be a contributing member of society?
+    </p>
+    <ul>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Equal protection index
+          <a
+            className="citation"
+            href="https://v-dem.net/vdemds.html"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Varieties of Democracy (V-Dem), Dataset Version 12"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Equal access index
+          <a
+            className="citation"
+            href="https://v-dem.net/vdemds.html"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Varieties of Democracy (V-Dem), Dataset Version 12"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Power distributed by sexual orientation
+          <a
+            className="citation"
+            href="https://v-dem.net/vdemds.html"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Varieties of Democracy (V-Dem), Dataset Version 12"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Access to public services distributed by social group
+          <a
+            className="citation"
+            href="https://v-dem.net/vdemds.html"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Varieties of Democracy (V-Dem), Dataset Version 12"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Discrimination and violence against minorities 
+          <a
+            className="citation"
+            href="https://fragilestatesindex.org/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Fund for Peace Fragile States Index"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Acceptance of gays and lesbians 
+          <a
+            className="citation"
+            href="https://ga.gallup.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Gallup World Poll"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+    </ul>
+    <img
+      alt="Is no one excluded from the opportunity to be a contributing member of society?"
+      className="component-img "
+      src="test-file"
+    />
+    <h5
+      className="component-title"
+      style={
+        Object {
+          "backgroundColor": "rgb(75, 255, 255)",
+        }
+      }
+    >
+      Inclusiveness
+    </h5>
+  </div>
+  <div
+    className="component"
+    id="Access_to_Advanced_Education"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <p>
+      Do people have access to the world’s most advanced knowledge?
+    </p>
+    <ul>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Citable documents 
+          <a
+            className="citation"
+            href="https://www.scimagojr.com/countryrank.php"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Scimago Journal & Country Rank"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Academic freedom 
+          <a
+            className="citation"
+            href="https://v-dem.net/vdemds.html"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Varieties of Democracy (V-Dem), Dataset Version 12"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Women with advanced education 
+          <a
+            className="citation"
+            href="http://ghdx.healthdata.org/record/global-burden-disease-study-2019-gbd-2019-covariates-1980-2019"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Institute for Health Metrics and Evaluation"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Expected years of tertiary schooling 
+          <a
+            className="citation"
+            href="http://data.uis.unesco.org/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="UN Educational, Scientific, and Cultural Organization Institute for Statistics"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+      <li
+        className="list-item"
+      >
+        <div
+          className="Tooltip-Wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          Quality weighted universities 
+          <a
+            className="citation"
+            href="https://www.timeshighereducation.com/world-university-rankings/2022"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Times Higher Education World University Rankings, QS World University Rankings, and Academic Ranking of World Universities"
+          >
+            ⓘ
+          </a>
+          <a
+            className="citation"
+            href="https://www.topuniversities.com/university-rankings/world-university-rankings/2023"
+            rel="noopener noreferrer"
+            target="_blank"
+            title=" Varieties of Democracy (V-Dem), Dataset Version 12 "
+          >
+            ⓘ
+          </a>
+          <a
+            className="citation"
+            href="https://www.shanghairanking.com/rankings/arwu/2020"
+            rel="noopener noreferrer"
+            target="_blank"
+            title=" SPI calculations"
+          >
+            ⓘ
+          </a>
+          <a
+            className="citation"
+            href="https://v-dem.net/vdemds.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            ⓘ
+          </a>
+        </div>
+      </li>
+    </ul>
+    <img
+      alt="Do people have access to the world’s most advanced knowledge?"
+      className="component-img "
+      src="test-file"
+    />
+    <h5
+      className="component-title"
+      style={
+        Object {
+          "backgroundColor": "rgb(255, 255, 0)",
+        }
+      }
+    >
+      Access to Advanced Education
+    </h5>
+  </div>
+</div>
+`;
