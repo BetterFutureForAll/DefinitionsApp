@@ -1,6 +1,7 @@
 import Indicator from "../components/Indicator";
 import Component from "../components/Component";
 import renderer from 'react-test-renderer';
+import { render, screen } from '@testing-library/react';
 import rawData from '../assets/definitions.json'
 import Dimension from "../components/Dimension";
 import { groupBy, regEx } from "../hooks";
@@ -45,7 +46,10 @@ describe('Tests React Components', () => {
 
     const tree = renderer
       .create(<Indicator props={testObject}></Indicator>).toJSON();
+
     expect(tree).toMatchSnapshot();
+
+
   });
 
   test('Creates a component with multiple indicators', () => {
@@ -70,9 +74,12 @@ describe('Tests React Components', () => {
     const tree = renderer
       .create(
         dimensionsMap
-      )
+      );
+    render(dimensionsMap);
+    expect(screen.getByText('Opportunity')).toBeInTheDocument();
+    expect(screen.getByText('Basic Human Needs')).toBeInTheDocument();
+    expect(screen.getByText('Foundations of Wellbeing')).toBeInTheDocument();
     expect(tree).toMatchSnapshot();
-
   });
 
 

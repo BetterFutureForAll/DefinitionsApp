@@ -1,6 +1,6 @@
 import { parsedDef, regEx } from "../hooks";
 import data from '../assets/definitions.json';
-import { groupBy } from '../hooks';
+import { groupBy, useActive } from '../hooks';
 
 describe('test suite for hooks functions', () => {
   let dataJSON = data.definitionsArray;
