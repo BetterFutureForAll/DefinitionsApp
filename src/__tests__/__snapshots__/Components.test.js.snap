@@ -973,6 +973,7 @@ Map of Life"
                 href="https://mol.org/indicators/"
                 rel="noopener noreferrer"
                 target="_blank"
+                title="https://mol.org/indicators/"
               >
                 ⓘ
               </a>
@@ -1582,6 +1583,7 @@ Map of Life"
                 href="https://v-dem.net/vdemds.html"
                 rel="noopener noreferrer"
                 target="_blank"
+                title="https://v-dem.net/vdemds.html"
               >
                 ⓘ
               </a>
@@ -2364,6 +2366,7 @@ Map of Life"
           href="https://mol.org/indicators/"
           rel="noopener noreferrer"
           target="_blank"
+          title="https://mol.org/indicators/"
         >
           ⓘ
         </a>
@@ -2850,6 +2853,7 @@ Map of Life"
           href="https://v-dem.net/vdemds.html"
           rel="noopener noreferrer"
           target="_blank"
+          title="https://v-dem.net/vdemds.html"
         >
           ⓘ
         </a>
@@ -2935,6 +2939,7 @@ exports[`Tests React Components Should create multiple links from a single objec
       href="https://v-dem.net/vdemds.html"
       rel="noopener noreferrer"
       target="_blank"
+      title="https://v-dem.net/vdemds.html"
     >
       ⓘ
     </a>
