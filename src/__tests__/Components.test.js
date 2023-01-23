@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 import { render, screen } from '@testing-library/react';
 import rawData from '../assets/definitions.json'
 import Dimension from "../components/Dimension";
-import { groupBy, regEx } from "../hooks";
+import { groupBy } from "../hooks";
 
 describe('Tests React Components', () => {
   let data = rawData.definitionsArray;
