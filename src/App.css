@@ -84,7 +84,7 @@
   border-width: 1px;
   border-color: rgb(0, 0, 0);
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   height: 33vh;
   width: 100%;
   overflow: hidden;
@@ -125,14 +125,14 @@
 }
 
 .dimension-title {
-  writing-mode: vertical-lr;
+  writing-mode: vertical-rl;
   text-orientation: sideways;
   transform: rotate(-180deg);
   text-align: center;
-  font-size: 1.5vmax;
-  margin: 0px;
-  height: 90%;
-  padding: 2px;
+  font-size: 2.5vh;
+  margin: 2px;
+  height: max-content;
+  padding: 5px 1px;
   border-style: solid;
   border-width: 1px;
   border-radius: 8px;
