@@ -6,12 +6,12 @@ import data from './assets/definitions.json';
 function App() {
   const [isActive, setActive] = useState("false");
   const ToggleClass = () => {
-    setActive(!isActive); 
-   };
+    setActive(!isActive);
+  };
 
   return (
     <div className="definitionsApp" >
-      <Dimensions props={data.definitionsArray} clickHandler={ToggleClass}/>
+      <Dimensions props={data} clickHandler={ToggleClass} />
     </div>
   );
 }
